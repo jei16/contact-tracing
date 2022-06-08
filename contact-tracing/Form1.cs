@@ -62,9 +62,16 @@ namespace contact_tracing
         {
             StreamWriter file = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\test.txt");
             file.WriteLine("First Name:"+" "+FirstName.Text);
+            file.WriteLine("Middle Name:" + " " + MiddleName.Text);
+            file.WriteLine("Last Name:" + " " + LastName.Text);
+            file.WriteLine("Age:" + " " + Age.Text);
+            file.WriteLine("Birthday:" + " " + Month.Text + " "+ Day.Text+","+" "+Year.Text);
+
+
+
             file.Close();
 
-            MessageBox.Show(FirstName.Text);
+            MessageBox.Show("Submitted!");
         }
     }
 }
