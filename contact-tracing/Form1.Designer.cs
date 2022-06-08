@@ -37,7 +37,6 @@
             this.FemaleButton = new System.Windows.Forms.RadioButton();
             this.OtherButton = new System.Windows.Forms.RadioButton();
             this.Other = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.LastName = new System.Windows.Forms.TextBox();
@@ -64,28 +63,30 @@
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.FirstName = new System.Windows.Forms.TextBox();
+            this.SubmitButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.Month = new System.Windows.Forms.DomainUpDown();
             this.Day = new System.Windows.Forms.NumericUpDown();
             this.Year = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.FirstName = new System.Windows.Forms.TextBox();
-            this.SubmitButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.Day)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Year)).BeginInit();
+            this.Birthday = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Day)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Year)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -178,16 +179,6 @@
             this.Other.Name = "Other";
             this.Other.Size = new System.Drawing.Size(209, 20);
             this.Other.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(123, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Birthday";
             // 
             // label6
             // 
@@ -444,75 +435,6 @@
             this.checkBox8.Text = "checkBox8";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
-            // Month
-            // 
-            this.Month.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Month.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Month.Items.Add("January");
-            this.Month.Items.Add("February");
-            this.Month.Items.Add("March");
-            this.Month.Items.Add("April");
-            this.Month.Items.Add("May");
-            this.Month.Items.Add("June");
-            this.Month.Items.Add("July");
-            this.Month.Items.Add("August");
-            this.Month.Items.Add("September");
-            this.Month.Items.Add("October ");
-            this.Month.Items.Add("November");
-            this.Month.Items.Add("December");
-            this.Month.Location = new System.Drawing.Point(136, 97);
-            this.Month.Name = "Month";
-            this.Month.Size = new System.Drawing.Size(120, 20);
-            this.Month.TabIndex = 13;
-            this.Month.SelectedItemChanged += new System.EventHandler(this.Month_SelectedItemChanged);
-            // 
-            // Day
-            // 
-            this.Day.Location = new System.Drawing.Point(136, 123);
-            this.Day.Name = "Day";
-            this.Day.Size = new System.Drawing.Size(120, 20);
-            this.Day.TabIndex = 46;
-            // 
-            // Year
-            // 
-            this.Year.Location = new System.Drawing.Point(136, 149);
-            this.Year.Name = "Year";
-            this.Year.Size = new System.Drawing.Size(120, 20);
-            this.Year.TabIndex = 47;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(114, 100);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 13);
-            this.label10.TabIndex = 48;
-            this.label10.Text = "M";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(114, 125);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(15, 13);
-            this.label11.TabIndex = 49;
-            this.label11.Text = "D";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(114, 151);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(14, 13);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "Y";
-            // 
             // FirstName
             // 
             this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -562,19 +484,19 @@
             this.panel3.Size = new System.Drawing.Size(253, 114);
             this.panel3.TabIndex = 55;
             // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(10, 512);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(357, 132);
-            this.panel5.TabIndex = 57;
-            // 
             // panel4
             // 
             this.panel4.Location = new System.Drawing.Point(0, 111);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(253, 46);
             this.panel4.TabIndex = 58;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(10, 512);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(357, 132);
+            this.panel5.TabIndex = 57;
             // 
             // panel6
             // 
@@ -584,17 +506,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(246, 52);
             this.panel6.TabIndex = 58;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(48, 25);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(39, 17);
-            this.radioButton1.TabIndex = 59;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "No";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -607,12 +518,115 @@
             this.radioButton2.Text = "Yes";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(48, 25);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(39, 17);
+            this.radioButton1.TabIndex = 59;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "No";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(123, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Birthday";
+            // 
+            // Month
+            // 
+            this.Month.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Month.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Month.Items.Add("January");
+            this.Month.Items.Add("February");
+            this.Month.Items.Add("March");
+            this.Month.Items.Add("April");
+            this.Month.Items.Add("May");
+            this.Month.Items.Add("June");
+            this.Month.Items.Add("July");
+            this.Month.Items.Add("August");
+            this.Month.Items.Add("September");
+            this.Month.Items.Add("October ");
+            this.Month.Items.Add("November");
+            this.Month.Items.Add("December");
+            this.Month.Location = new System.Drawing.Point(456, 372);
+            this.Month.Name = "Month";
+            this.Month.Size = new System.Drawing.Size(120, 20);
+            this.Month.TabIndex = 13;
+            this.Month.SelectedItemChanged += new System.EventHandler(this.Month_SelectedItemChanged);
+            // 
+            // Day
+            // 
+            this.Day.Location = new System.Drawing.Point(456, 398);
+            this.Day.Name = "Day";
+            this.Day.Size = new System.Drawing.Size(120, 20);
+            this.Day.TabIndex = 46;
+            this.Day.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Year
+            // 
+            this.Year.Location = new System.Drawing.Point(456, 424);
+            this.Year.Name = "Year";
+            this.Year.Size = new System.Drawing.Size(120, 20);
+            this.Year.TabIndex = 47;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label10.Location = new System.Drawing.Point(434, 375);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 13);
+            this.label10.TabIndex = 48;
+            this.label10.Text = "M";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label11.Location = new System.Drawing.Point(434, 400);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(15, 13);
+            this.label11.TabIndex = 49;
+            this.label11.Text = "D";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label12.Location = new System.Drawing.Point(434, 426);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(14, 13);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Y";
+            // 
+            // Birthday
+            // 
+            this.Birthday.Location = new System.Drawing.Point(78, 106);
+            this.Birthday.Name = "Birthday";
+            this.Birthday.Size = new System.Drawing.Size(200, 20);
+            this.Birthday.TabIndex = 59;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(532, 690);
+            this.Controls.Add(this.Birthday);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SubmitButton);
@@ -658,8 +672,6 @@
             this.Name = "Form1";
             this.Text = " Contact Tracing Form";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Day)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Year)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -667,6 +679,8 @@
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Day)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Year)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -683,7 +697,6 @@
         private System.Windows.Forms.RadioButton FemaleButton;
         private System.Windows.Forms.RadioButton OtherButton;
         private System.Windows.Forms.TextBox Other;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox Address;
         private System.Windows.Forms.TextBox LastName;
@@ -710,12 +723,6 @@
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.DomainUpDown Month;
-        private System.Windows.Forms.NumericUpDown Day;
-        private System.Windows.Forms.NumericUpDown Year;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox FirstName;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Panel panel1;
@@ -726,6 +733,14 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DomainUpDown Month;
+        private System.Windows.Forms.NumericUpDown Day;
+        private System.Windows.Forms.NumericUpDown Year;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker Birthday;
     }
 }
 
