@@ -52,14 +52,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.NoBooster = new System.Windows.Forms.RadioButton();
             this.HasBooster = new System.Windows.Forms.RadioButton();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.cough = new System.Windows.Forms.CheckBox();
-            this.fever = new System.Windows.Forms.CheckBox();
-            this.sorethroat = new System.Windows.Forms.CheckBox();
-            this.shortnessofbreath = new System.Windows.Forms.CheckBox();
-            this.lossofsmellortaste = new System.Windows.Forms.CheckBox();
-            this.runnynose = new System.Windows.Forms.CheckBox();
             this.FirstName = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -74,14 +66,24 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.Othersbutton = new System.Windows.Forms.RadioButton();
-            this.NoSymptoms = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cough = new System.Windows.Forms.CheckBox();
+            this.fever = new System.Windows.Forms.CheckBox();
+            this.sorethroat = new System.Windows.Forms.CheckBox();
+            this.shortnessofbreath = new System.Windows.Forms.CheckBox();
+            this.runnynose = new System.Windows.Forms.CheckBox();
+            this.lossofsmellortaste = new System.Windows.Forms.CheckBox();
             this.HasSymptoms = new System.Windows.Forms.RadioButton();
+            this.NoSymptoms = new System.Windows.Forms.RadioButton();
+            this.Othersbutton = new System.Windows.Forms.RadioButton();
             this.Othersymptext = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Day)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Year)).BeginInit();
             this.SuspendLayout();
@@ -330,93 +332,6 @@
             this.HasBooster.UseVisualStyleBackColor = true;
             this.HasBooster.CheckedChanged += new System.EventHandler(this.HasBooster_CheckedChanged);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(11, 465);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(207, 13);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "Experiencing COVID-19 Symptoms?";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(12, 518);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(127, 13);
-            this.label16.TabIndex = 37;
-            this.label16.Text = "If yes, please specify";
-            // 
-            // cough
-            // 
-            this.cough.AutoSize = true;
-            this.cough.Enabled = false;
-            this.cough.Location = new System.Drawing.Point(49, 543);
-            this.cough.Name = "cough";
-            this.cough.Size = new System.Drawing.Size(57, 17);
-            this.cough.TabIndex = 38;
-            this.cough.Text = "Cough";
-            this.cough.UseVisualStyleBackColor = true;
-            this.cough.CheckedChanged += new System.EventHandler(this.cough_CheckedChanged);
-            // 
-            // fever
-            // 
-            this.fever.AutoSize = true;
-            this.fever.Location = new System.Drawing.Point(49, 566);
-            this.fever.Name = "fever";
-            this.fever.Size = new System.Drawing.Size(53, 17);
-            this.fever.TabIndex = 39;
-            this.fever.Text = "Fever";
-            this.fever.UseVisualStyleBackColor = true;
-            this.fever.CheckedChanged += new System.EventHandler(this.fever_CheckedChanged);
-            // 
-            // sorethroat
-            // 
-            this.sorethroat.AutoSize = true;
-            this.sorethroat.Location = new System.Drawing.Point(49, 589);
-            this.sorethroat.Name = "sorethroat";
-            this.sorethroat.Size = new System.Drawing.Size(78, 17);
-            this.sorethroat.TabIndex = 40;
-            this.sorethroat.Text = "Sore throat";
-            this.sorethroat.UseVisualStyleBackColor = true;
-            this.sorethroat.CheckedChanged += new System.EventHandler(this.sorethroat_CheckedChanged);
-            // 
-            // shortnessofbreath
-            // 
-            this.shortnessofbreath.AutoSize = true;
-            this.shortnessofbreath.Location = new System.Drawing.Point(49, 612);
-            this.shortnessofbreath.Name = "shortnessofbreath";
-            this.shortnessofbreath.Size = new System.Drawing.Size(118, 17);
-            this.shortnessofbreath.TabIndex = 41;
-            this.shortnessofbreath.Text = "Shortness of breath";
-            this.shortnessofbreath.UseVisualStyleBackColor = true;
-            this.shortnessofbreath.CheckedChanged += new System.EventHandler(this.shortnessofbreath_CheckedChanged);
-            // 
-            // lossofsmellortaste
-            // 
-            this.lossofsmellortaste.AutoSize = true;
-            this.lossofsmellortaste.Location = new System.Drawing.Point(272, 566);
-            this.lossofsmellortaste.Name = "lossofsmellortaste";
-            this.lossofsmellortaste.Size = new System.Drawing.Size(124, 17);
-            this.lossofsmellortaste.TabIndex = 43;
-            this.lossofsmellortaste.Text = "Loss of smell or taste";
-            this.lossofsmellortaste.UseVisualStyleBackColor = true;
-            this.lossofsmellortaste.CheckedChanged += new System.EventHandler(this.lossofsmellortaste_CheckedChanged);
-            // 
-            // runnynose
-            // 
-            this.runnynose.AutoSize = true;
-            this.runnynose.Location = new System.Drawing.Point(272, 543);
-            this.runnynose.Name = "runnynose";
-            this.runnynose.Size = new System.Drawing.Size(83, 17);
-            this.runnynose.TabIndex = 42;
-            this.runnynose.Text = "Runny nose";
-            this.runnynose.UseVisualStyleBackColor = true;
-            this.runnynose.CheckedChanged += new System.EventHandler(this.runnynose_CheckedChanged);
-            // 
             // FirstName
             // 
             this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -470,6 +385,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Location = new System.Drawing.Point(0, 111);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(253, 46);
@@ -592,28 +508,97 @@
             this.panel6.Size = new System.Drawing.Size(168, 121);
             this.panel6.TabIndex = 59;
             // 
-            // Othersbutton
+            // label15
             // 
-            this.Othersbutton.AutoSize = true;
-            this.Othersbutton.Location = new System.Drawing.Point(19, 88);
-            this.Othersbutton.Name = "Othersbutton";
-            this.Othersbutton.Size = new System.Drawing.Size(132, 17);
-            this.Othersbutton.TabIndex = 11;
-            this.Othersbutton.TabStop = true;
-            this.Othersbutton.Text = "Others (please specify)";
-            this.Othersbutton.UseVisualStyleBackColor = true;
-            this.Othersbutton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(11, 465);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(207, 13);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Experiencing COVID-19 Symptoms?";
             // 
-            // NoSymptoms
+            // label16
             // 
-            this.NoSymptoms.AutoSize = true;
-            this.NoSymptoms.Location = new System.Drawing.Point(49, 481);
-            this.NoSymptoms.Name = "NoSymptoms";
-            this.NoSymptoms.Size = new System.Drawing.Size(39, 17);
-            this.NoSymptoms.TabIndex = 59;
-            this.NoSymptoms.Text = "No";
-            this.NoSymptoms.UseVisualStyleBackColor = true;
-            this.NoSymptoms.CheckedChanged += new System.EventHandler(this.NoSymptoms_CheckedChanged);
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(12, 518);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(127, 13);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "If yes, please specify";
+            // 
+            // cough
+            // 
+            this.cough.AutoSize = true;
+            this.cough.Enabled = false;
+            this.cough.Location = new System.Drawing.Point(49, 543);
+            this.cough.Name = "cough";
+            this.cough.Size = new System.Drawing.Size(57, 17);
+            this.cough.TabIndex = 38;
+            this.cough.Text = "Cough";
+            this.cough.UseVisualStyleBackColor = true;
+            this.cough.CheckedChanged += new System.EventHandler(this.cough_CheckedChanged);
+            // 
+            // fever
+            // 
+            this.fever.AutoSize = true;
+            this.fever.Enabled = false;
+            this.fever.Location = new System.Drawing.Point(49, 566);
+            this.fever.Name = "fever";
+            this.fever.Size = new System.Drawing.Size(53, 17);
+            this.fever.TabIndex = 39;
+            this.fever.Text = "Fever";
+            this.fever.UseVisualStyleBackColor = true;
+            this.fever.CheckedChanged += new System.EventHandler(this.fever_CheckedChanged);
+            // 
+            // sorethroat
+            // 
+            this.sorethroat.AutoSize = true;
+            this.sorethroat.Enabled = false;
+            this.sorethroat.Location = new System.Drawing.Point(49, 589);
+            this.sorethroat.Name = "sorethroat";
+            this.sorethroat.Size = new System.Drawing.Size(78, 17);
+            this.sorethroat.TabIndex = 40;
+            this.sorethroat.Text = "Sore throat";
+            this.sorethroat.UseVisualStyleBackColor = true;
+            this.sorethroat.CheckedChanged += new System.EventHandler(this.sorethroat_CheckedChanged);
+            // 
+            // shortnessofbreath
+            // 
+            this.shortnessofbreath.AutoSize = true;
+            this.shortnessofbreath.Enabled = false;
+            this.shortnessofbreath.Location = new System.Drawing.Point(49, 612);
+            this.shortnessofbreath.Name = "shortnessofbreath";
+            this.shortnessofbreath.Size = new System.Drawing.Size(118, 17);
+            this.shortnessofbreath.TabIndex = 41;
+            this.shortnessofbreath.Text = "Shortness of breath";
+            this.shortnessofbreath.UseVisualStyleBackColor = true;
+            this.shortnessofbreath.CheckedChanged += new System.EventHandler(this.shortnessofbreath_CheckedChanged);
+            // 
+            // runnynose
+            // 
+            this.runnynose.AutoSize = true;
+            this.runnynose.Enabled = false;
+            this.runnynose.Location = new System.Drawing.Point(272, 543);
+            this.runnynose.Name = "runnynose";
+            this.runnynose.Size = new System.Drawing.Size(83, 17);
+            this.runnynose.TabIndex = 42;
+            this.runnynose.Text = "Runny nose";
+            this.runnynose.UseVisualStyleBackColor = true;
+            this.runnynose.CheckedChanged += new System.EventHandler(this.runnynose_CheckedChanged);
+            // 
+            // lossofsmellortaste
+            // 
+            this.lossofsmellortaste.AutoSize = true;
+            this.lossofsmellortaste.Enabled = false;
+            this.lossofsmellortaste.Location = new System.Drawing.Point(272, 566);
+            this.lossofsmellortaste.Name = "lossofsmellortaste";
+            this.lossofsmellortaste.Size = new System.Drawing.Size(124, 17);
+            this.lossofsmellortaste.TabIndex = 43;
+            this.lossofsmellortaste.Text = "Loss of smell or taste";
+            this.lossofsmellortaste.UseVisualStyleBackColor = true;
+            this.lossofsmellortaste.CheckedChanged += new System.EventHandler(this.lossofsmellortaste_CheckedChanged);
             // 
             // HasSymptoms
             // 
@@ -626,8 +611,32 @@
             this.HasSymptoms.UseVisualStyleBackColor = true;
             this.HasSymptoms.CheckedChanged += new System.EventHandler(this.HasSymptoms_CheckedChanged);
             // 
+            // NoSymptoms
+            // 
+            this.NoSymptoms.AutoSize = true;
+            this.NoSymptoms.Location = new System.Drawing.Point(49, 481);
+            this.NoSymptoms.Name = "NoSymptoms";
+            this.NoSymptoms.Size = new System.Drawing.Size(39, 17);
+            this.NoSymptoms.TabIndex = 59;
+            this.NoSymptoms.Text = "No";
+            this.NoSymptoms.UseVisualStyleBackColor = true;
+            this.NoSymptoms.CheckedChanged += new System.EventHandler(this.NoSymptoms_CheckedChanged);
+            // 
+            // Othersbutton
+            // 
+            this.Othersbutton.AutoSize = true;
+            this.Othersbutton.Location = new System.Drawing.Point(19, 88);
+            this.Othersbutton.Name = "Othersbutton";
+            this.Othersbutton.Size = new System.Drawing.Size(132, 17);
+            this.Othersbutton.TabIndex = 11;
+            this.Othersbutton.TabStop = true;
+            this.Othersbutton.Text = "Others (please specify)";
+            this.Othersbutton.UseVisualStyleBackColor = true;
+            this.Othersbutton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            // 
             // Othersymptext
             // 
+            this.Othersymptext.Enabled = false;
             this.Othersymptext.Location = new System.Drawing.Point(274, 609);
             this.Othersymptext.Name = "Othersymptext";
             this.Othersymptext.Size = new System.Drawing.Size(122, 20);
@@ -636,12 +645,18 @@
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(271, 590);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 13);
-            this.label17.TabIndex = 62;
+            this.label17.TabIndex = 0;
             this.label17.Text = "Others:";
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(92, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(415, 206);
+            this.panel5.TabIndex = 63;
             // 
             // Form1
             // 
@@ -700,6 +715,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Day)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Year)).EndInit();
             this.ResumeLayout(false);
@@ -733,14 +749,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RadioButton NoBooster;
         private System.Windows.Forms.RadioButton HasBooster;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox cough;
-        private System.Windows.Forms.CheckBox fever;
-        private System.Windows.Forms.CheckBox sorethroat;
-        private System.Windows.Forms.CheckBox shortnessofbreath;
-        private System.Windows.Forms.CheckBox lossofsmellortaste;
-        private System.Windows.Forms.CheckBox runnynose;
         private System.Windows.Forms.TextBox FirstName;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Panel panel1;
@@ -755,9 +763,18 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.RadioButton Othersbutton;
-        private System.Windows.Forms.RadioButton NoSymptoms;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox cough;
+        private System.Windows.Forms.CheckBox fever;
+        private System.Windows.Forms.CheckBox sorethroat;
+        private System.Windows.Forms.CheckBox shortnessofbreath;
+        private System.Windows.Forms.CheckBox runnynose;
+        private System.Windows.Forms.CheckBox lossofsmellortaste;
         private System.Windows.Forms.RadioButton HasSymptoms;
+        private System.Windows.Forms.RadioButton NoSymptoms;
+        private System.Windows.Forms.RadioButton Othersbutton;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox Othersymptext;
         private System.Windows.Forms.Label label17;
     }

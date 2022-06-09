@@ -133,6 +133,21 @@ namespace contact_tracing
         private void HasSymptoms_CheckedChanged(object sender, EventArgs e)
         {
             symptoms = "Yes";
+
+            if (HasSymptoms.Checked == true)
+            {
+                cough.Enabled = true;
+                fever.Enabled = true;
+                sorethroat.Enabled = true;
+                shortnessofbreath.Enabled = true;
+                runnynose.Enabled = true;
+                lossofsmellortaste.Enabled = true;
+
+            }
+            else
+            {
+                cough.Enabled = false;
+            }
         }
 
         private void cough_CheckedChanged(object sender, EventArgs e)
@@ -183,41 +198,18 @@ namespace contact_tracing
             
         }
 
-        private void symptomslistt_Paint(object sender, PaintEventArgs e)
-
-        {
-           
-                if (HasSymptoms.Checked == true)
-                {
-                    cough.Enabled = true;
-
-                }
-                else
-                {
-                    cough.Enabled = false;
-                }
-            
-
-        }
 
         private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
         {
-          if (Othersbutton.Checked == true)
+            if (Othersbutton.Checked == true)
             {
                 OtherTextBox.ReadOnly = false;
-            }    
-          else
+            }
+            else
             {
                 OtherTextBox.ReadOnly = true;
                 OtherTextBox.Text = " ";
             }
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-                
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -225,9 +217,26 @@ namespace contact_tracing
 
         }
 
+      
+
+        private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void Othersymptext_TextChanged(object sender, EventArgs e)
         {
-            othersymp = Othersymptext.Text;
+
+        }
+
+        private void othersymptext_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
