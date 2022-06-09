@@ -80,6 +80,7 @@
             this.othersymptext = new System.Windows.Forms.TextBox();
             this.Othersymp = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -166,7 +167,7 @@
             // OtherTextBox
             // 
             this.OtherTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.OtherTextBox.Location = new System.Drawing.Point(58, 89);
+            this.OtherTextBox.Location = new System.Drawing.Point(58, 87);
             this.OtherTextBox.Name = "OtherTextBox";
             this.OtherTextBox.Size = new System.Drawing.Size(178, 20);
             this.OtherTextBox.TabIndex = 10;
@@ -654,6 +655,13 @@
             this.panel5.Size = new System.Drawing.Size(472, 132);
             this.panel5.TabIndex = 57;
             // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(100, 65);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(168, 121);
+            this.panel6.TabIndex = 59;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -699,6 +707,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.Symptomspanel);
+            this.Controls.Add(this.panel6);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = " Contact Tracing Form";
@@ -773,6 +782,7 @@
         private System.Windows.Forms.TextBox othersymptext;
         private System.Windows.Forms.Label Othersymp;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 

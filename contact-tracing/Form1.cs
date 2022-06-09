@@ -24,6 +24,7 @@ namespace contact_tracing
         string shortbreath;
         string runnynosee;
         string losssmelltaste;
+        string othersymp;
         public Form1()
         {
             InitializeComponent();
@@ -86,7 +87,7 @@ namespace contact_tracing
             file.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
             file.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
             file.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
-            file.WriteLine("Symptoms list:" + " " + coughh + " " + feverr + " ");
+            file.WriteLine("Symptoms list:" + " " + coughh + " / " + feverr + " / "+ sorethroatt + " / " + shortbreath+  " / " + runnynosee + " / " +losssmelltaste + " / " + othersymp );
 
             file.Close();
 
@@ -171,7 +172,7 @@ namespace contact_tracing
 
         private void othersymptext_TextChanged(object sender, EventArgs e)
         {
-
+            othersymp = othersymptext.Text;
         }
 
         private void OtherTextBox_TextChanged(object sender, EventArgs e)
@@ -180,13 +181,8 @@ namespace contact_tracing
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
-
-        
         {
-            if (HasSymptoms.Checked == true)
-            {
-                cough.Enabled = true;
-            }
+            
         }
     }
 }
