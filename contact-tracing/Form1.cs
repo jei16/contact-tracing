@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace contact_tracing
 {
     public partial class Form1 : Form
@@ -27,6 +28,7 @@ namespace contact_tracing
         {
             InitializeComponent();
         }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -177,7 +179,14 @@ namespace contact_tracing
             gender = OtherTextBox.Text;
         }
 
+        private void panel6_Paint(object sender, PaintEventArgs e)
 
-       
+        
+        {
+            if (HasSymptoms.Checked == true)
+            {
+                cough.Enabled = true;
+            }
+        }
     }
 }
