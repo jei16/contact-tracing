@@ -65,7 +65,7 @@ namespace contact_tracing
             file.WriteLine("Middle Name:" + " " + MiddleName.Text);
             file.WriteLine("Last Name:" + " " + LastName.Text);
             file.WriteLine("Age:" + " " + Age.Text);
-            file.WriteLine("Birthday:" + Birthday);
+            file.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
 
 
 

@@ -59,7 +59,6 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
@@ -80,10 +79,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.Birthday = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Day)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Year)).BeginInit();
@@ -390,29 +390,19 @@
             this.checkBox4.AutoSize = true;
             this.checkBox4.Location = new System.Drawing.Point(49, 612);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
+            this.checkBox4.Size = new System.Drawing.Size(118, 17);
             this.checkBox4.TabIndex = 41;
-            this.checkBox4.Text = "checkBox4";
+            this.checkBox4.Text = "Shortness of breath";
             this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(272, 612);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
-            this.checkBox5.TabIndex = 45;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.Location = new System.Drawing.Point(272, 589);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(80, 17);
+            this.checkBox6.Size = new System.Drawing.Size(60, 17);
             this.checkBox6.TabIndex = 44;
-            this.checkBox6.Text = "checkBox6";
+            this.checkBox6.Text = "Others:";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // checkBox7
@@ -420,9 +410,9 @@
             this.checkBox7.AutoSize = true;
             this.checkBox7.Location = new System.Drawing.Point(272, 566);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(80, 17);
+            this.checkBox7.Size = new System.Drawing.Size(124, 17);
             this.checkBox7.TabIndex = 43;
-            this.checkBox7.Text = "checkBox7";
+            this.checkBox7.Text = "Loss of smell or taste";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox8
@@ -430,9 +420,9 @@
             this.checkBox8.AutoSize = true;
             this.checkBox8.Location = new System.Drawing.Point(272, 543);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(80, 17);
+            this.checkBox8.Size = new System.Drawing.Size(83, 17);
             this.checkBox8.TabIndex = 42;
-            this.checkBox8.Text = "checkBox8";
+            this.checkBox8.Text = "Runny nose";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // FirstName
@@ -493,9 +483,10 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.textBox1);
             this.panel5.Location = new System.Drawing.Point(10, 512);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(357, 132);
+            this.panel5.Size = new System.Drawing.Size(443, 132);
             this.panel5.TabIndex = 57;
             // 
             // panel6
@@ -555,15 +546,26 @@
             this.Month.Items.Add("October ");
             this.Month.Items.Add("November");
             this.Month.Items.Add("December");
-            this.Month.Location = new System.Drawing.Point(456, 372);
+            this.Month.Location = new System.Drawing.Point(148, 100);
             this.Month.Name = "Month";
             this.Month.Size = new System.Drawing.Size(120, 20);
             this.Month.TabIndex = 13;
+            this.Month.Text = "January";
             this.Month.SelectedItemChanged += new System.EventHandler(this.Month_SelectedItemChanged);
             // 
             // Day
             // 
-            this.Day.Location = new System.Drawing.Point(456, 398);
+            this.Day.Location = new System.Drawing.Point(148, 126);
+            this.Day.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.Day.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.Day.Name = "Day";
             this.Day.Size = new System.Drawing.Size(120, 20);
             this.Day.TabIndex = 46;
@@ -575,17 +577,32 @@
             // 
             // Year
             // 
-            this.Year.Location = new System.Drawing.Point(456, 424);
+            this.Year.Location = new System.Drawing.Point(148, 152);
+            this.Year.Maximum = new decimal(new int[] {
+            2022,
+            0,
+            0,
+            0});
+            this.Year.Minimum = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
             this.Year.Name = "Year";
             this.Year.Size = new System.Drawing.Size(120, 20);
             this.Year.TabIndex = 47;
+            this.Year.Value = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(434, 375);
+            this.label10.Location = new System.Drawing.Point(126, 103);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 13);
             this.label10.TabIndex = 48;
@@ -596,7 +613,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(434, 400);
+            this.label11.Location = new System.Drawing.Point(126, 128);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 13);
             this.label11.TabIndex = 49;
@@ -607,18 +624,18 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(434, 426);
+            this.label12.Location = new System.Drawing.Point(126, 154);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(14, 13);
             this.label12.TabIndex = 50;
             this.label12.Text = "Y";
             // 
-            // Birthday
+            // textBox1
             // 
-            this.Birthday.Location = new System.Drawing.Point(78, 106);
-            this.Birthday.Name = "Birthday";
-            this.Birthday.Size = new System.Drawing.Size(200, 20);
-            this.Birthday.TabIndex = 59;
+            this.textBox1.Location = new System.Drawing.Point(283, 97);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(128, 20);
+            this.textBox1.TabIndex = 59;
             // 
             // Form1
             // 
@@ -626,7 +643,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(532, 690);
-            this.Controls.Add(this.Birthday);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SubmitButton);
@@ -636,7 +652,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Year);
             this.Controls.Add(this.Day);
-            this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.checkBox8);
@@ -677,6 +692,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Day)).EndInit();
@@ -719,7 +736,6 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox8;
@@ -740,7 +756,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker Birthday;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
