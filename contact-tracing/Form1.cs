@@ -68,6 +68,12 @@ namespace contact_tracing
 
         private void Month_SelectedItemChanged(object sender, EventArgs e)
         {
+            if (Month.Text == "January")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
+
 
         }
 
@@ -142,11 +148,19 @@ namespace contact_tracing
                 shortnessofbreath.Enabled = true;
                 runnynose.Enabled = true;
                 lossofsmellortaste.Enabled = true;
+                Othersymptext.Enabled = true;
 
             }
             else
             {
                 cough.Enabled = false;
+                fever.Enabled = false;
+                sorethroat.Enabled = false;
+                shortnessofbreath.Enabled = false;
+                runnynose.Enabled = false;
+                lossofsmellortaste.Enabled = false;
+                Othersymptext.Enabled = false;
+                Othersymptext.Text = " ";
             }
         }
 
@@ -235,6 +249,11 @@ namespace contact_tracing
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
         }
