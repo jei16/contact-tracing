@@ -47,12 +47,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.NoVac = new System.Windows.Forms.RadioButton();
+            this.firstdosevac = new System.Windows.Forms.RadioButton();
+            this.fullyvac = new System.Windows.Forms.RadioButton();
             this.label14 = new System.Windows.Forms.Label();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.NoBooster = new System.Windows.Forms.RadioButton();
+            this.HasBooster = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -272,38 +272,41 @@
             this.label13.TabIndex = 27;
             this.label13.Text = "Have you received COVID-19 Vaccine?";
             // 
-            // radioButton4
+            // NoVac
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(15, 374);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(39, 17);
-            this.radioButton4.TabIndex = 28;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "No";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.NoVac.AutoSize = true;
+            this.NoVac.Location = new System.Drawing.Point(15, 374);
+            this.NoVac.Name = "NoVac";
+            this.NoVac.Size = new System.Drawing.Size(39, 17);
+            this.NoVac.TabIndex = 28;
+            this.NoVac.TabStop = true;
+            this.NoVac.Text = "No";
+            this.NoVac.UseVisualStyleBackColor = true;
+            this.NoVac.CheckedChanged += new System.EventHandler(this.NoVac_CheckedChanged);
             // 
-            // radioButton5
+            // firstdosevac
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(15, 397);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(113, 17);
-            this.radioButton5.TabIndex = 29;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Yes, 1st Dose only";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.firstdosevac.AutoSize = true;
+            this.firstdosevac.Location = new System.Drawing.Point(15, 397);
+            this.firstdosevac.Name = "firstdosevac";
+            this.firstdosevac.Size = new System.Drawing.Size(113, 17);
+            this.firstdosevac.TabIndex = 29;
+            this.firstdosevac.TabStop = true;
+            this.firstdosevac.Text = "Yes, 1st Dose only";
+            this.firstdosevac.UseVisualStyleBackColor = true;
+            this.firstdosevac.CheckedChanged += new System.EventHandler(this.firstdosevac_CheckedChanged);
             // 
-            // radioButton6
+            // fullyvac
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(15, 420);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(220, 17);
-            this.radioButton6.TabIndex = 30;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Yes, Fully Vaccinated (1st and 2nd Dose)";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.fullyvac.AutoSize = true;
+            this.fullyvac.Location = new System.Drawing.Point(15, 420);
+            this.fullyvac.Name = "fullyvac";
+            this.fullyvac.Size = new System.Drawing.Size(220, 17);
+            this.fullyvac.TabIndex = 30;
+            this.fullyvac.TabStop = true;
+            this.fullyvac.Text = "Yes, Fully Vaccinated (1st and 2nd Dose)";
+            this.fullyvac.UseVisualStyleBackColor = true;
+            this.fullyvac.CheckedChanged += new System.EventHandler(this.fullyvac_CheckedChanged);
             // 
             // label14
             // 
@@ -315,27 +318,27 @@
             this.label14.TabIndex = 31;
             this.label14.Text = "Booster Shot?";
             // 
-            // radioButton7
+            // NoBooster
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(12, 32);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(39, 17);
-            this.radioButton7.TabIndex = 32;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "No";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.NoBooster.AutoSize = true;
+            this.NoBooster.Location = new System.Drawing.Point(12, 32);
+            this.NoBooster.Name = "NoBooster";
+            this.NoBooster.Size = new System.Drawing.Size(39, 17);
+            this.NoBooster.TabIndex = 32;
+            this.NoBooster.TabStop = true;
+            this.NoBooster.Text = "No";
+            this.NoBooster.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // HasBooster
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(12, 55);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(43, 17);
-            this.radioButton8.TabIndex = 33;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Yes";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.HasBooster.AutoSize = true;
+            this.HasBooster.Location = new System.Drawing.Point(12, 55);
+            this.HasBooster.Name = "HasBooster";
+            this.HasBooster.Size = new System.Drawing.Size(43, 17);
+            this.HasBooster.TabIndex = 33;
+            this.HasBooster.TabStop = true;
+            this.HasBooster.Text = "Yes";
+            this.HasBooster.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -460,8 +463,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.radioButton8);
-            this.panel2.Controls.Add(this.radioButton7);
+            this.panel2.Controls.Add(this.HasBooster);
+            this.panel2.Controls.Add(this.NoBooster);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Location = new System.Drawing.Point(284, 343);
             this.panel2.Name = "panel2";
@@ -663,9 +666,9 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.radioButton6);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.fullyvac);
+            this.Controls.Add(this.firstdosevac);
+            this.Controls.Add(this.NoVac);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.label9);
@@ -726,12 +729,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton NoVac;
+        private System.Windows.Forms.RadioButton firstdosevac;
+        private System.Windows.Forms.RadioButton fullyvac;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton NoBooster;
+        private System.Windows.Forms.RadioButton HasBooster;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox checkBox1;

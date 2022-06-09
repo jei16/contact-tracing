@@ -14,6 +14,8 @@ namespace contact_tracing
     public partial class Form1 : Form
     {
         string gender;
+        string vaccinated;
+        string booster;
         public Form1()
         {
             InitializeComponent();
@@ -72,7 +74,8 @@ namespace contact_tracing
             file.WriteLine("Address:" + " " + Address.Text);
             file.WriteLine("Contact number:" + " " + ContactNumber.Text);
             file.WriteLine("Email:" + " " + Email.Text);
-            
+            file.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
+
 
 
 
@@ -91,6 +94,21 @@ namespace contact_tracing
         {
             gender = Other.Text;
      
+        }
+
+        private void NoVac_CheckedChanged(object sender, EventArgs e)
+        {
+            vaccinated = "No";
+        }
+
+        private void firstdosevac_CheckedChanged(object sender, EventArgs e)
+        {
+            vaccinated = "Yes, 1st Dose only";
+        }
+
+        private void fullyvac_CheckedChanged(object sender, EventArgs e)
+        {
+            vaccinated = "Yes, Fully Vaccinated (1st and 2nd Dose)";
         }
     }
 }
