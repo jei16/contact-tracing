@@ -435,7 +435,7 @@
             this.Month.Items.Add("July");
             this.Month.Items.Add("August");
             this.Month.Items.Add("September");
-            this.Month.Items.Add("October ");
+            this.Month.Items.Add("October");
             this.Month.Items.Add("November");
             this.Month.Items.Add("December");
             this.Month.Location = new System.Drawing.Point(136, 100);
@@ -488,6 +488,7 @@
             0,
             0,
             0});
+            this.Year.ValueChanged += new System.EventHandler(this.Year_ValueChanged);
             // 
             // label10
             // 

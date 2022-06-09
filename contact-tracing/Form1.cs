@@ -74,6 +74,74 @@ namespace contact_tracing
                 Day.Maximum = 31;
             }
 
+            
+
+            if (Month.Text == "March")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
+
+            if(Month.Text == "April")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 30;
+            }
+
+            if (Month.Text == "May")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
+
+            if (Month.Text == "June")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 30;
+            }
+
+            if (Month.Text == "July")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
+
+            if (Month.Text == "August")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
+
+            if (Month.Text == "September")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 30;
+            }
+
+            if (Month.Text == "October")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
+
+            if (Month.Text == "November")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 30;
+            }
+
+            if (Month.Text == "December")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
+
+            
+
+
+
+
+
 
         }
 
@@ -255,6 +323,22 @@ namespace contact_tracing
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void Year_ValueChanged(object sender, EventArgs e)
+        {
+            if (Month.Text == "February" && Year.Value==1904)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1904 || 1908)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
 
         }
     }
