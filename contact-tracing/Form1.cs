@@ -10,9 +10,10 @@ using System.Windows.Forms;
 using System.IO;
 
 namespace contact_tracing
-{
+{   
     public partial class Form1 : Form
     {
+        string gender;
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace contact_tracing
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            gender = "Male";
         }
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
@@ -58,6 +59,7 @@ namespace contact_tracing
 
         }
 
+
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             StreamWriter file = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\test.txt");
@@ -66,7 +68,11 @@ namespace contact_tracing
             file.WriteLine("Last Name:" + " " + LastName.Text);
             file.WriteLine("Age:" + " " + Age.Text);
             file.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
-
+            file.WriteLine("Gender:" + " " + gender);
+            file.WriteLine("Address:" + " " + Address.Text);
+            file.WriteLine("Contact number:" + " " + ContactNumber.Text);
+            file.WriteLine("Email:" + " " + Email.Text);
+            
 
 
 
@@ -74,6 +80,17 @@ namespace contact_tracing
             file.Close();
 
             MessageBox.Show("Submitted!");
+        }
+
+        private void FemaleButton_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "Female";
+        }
+
+        private void OtherButton_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = Other.Text;
+     
         }
     }
 }

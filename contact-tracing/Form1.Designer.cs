@@ -45,7 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.ContactNumber = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.EmailAdd = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
@@ -69,6 +69,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -79,7 +80,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -160,6 +160,7 @@
             this.FemaleButton.TabStop = true;
             this.FemaleButton.Text = "Female";
             this.FemaleButton.UseVisualStyleBackColor = true;
+            this.FemaleButton.CheckedChanged += new System.EventHandler(this.FemaleButton_CheckedChanged);
             // 
             // OtherButton
             // 
@@ -171,6 +172,7 @@
             this.OtherButton.TabStop = true;
             this.OtherButton.Text = "Other (Please specify)";
             this.OtherButton.UseVisualStyleBackColor = true;
+            this.OtherButton.CheckedChanged += new System.EventHandler(this.OtherButton_CheckedChanged);
             // 
             // Other
             // 
@@ -252,13 +254,13 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Email Address";
             // 
-            // EmailAdd
+            // Email
             // 
-            this.EmailAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.EmailAdd.Location = new System.Drawing.Point(228, 301);
-            this.EmailAdd.Name = "EmailAdd";
-            this.EmailAdd.Size = new System.Drawing.Size(282, 30);
-            this.EmailAdd.TabIndex = 23;
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Email.Location = new System.Drawing.Point(228, 301);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(282, 30);
+            this.Email.TabIndex = 23;
             // 
             // label13
             // 
@@ -489,6 +491,13 @@
             this.panel5.Size = new System.Drawing.Size(443, 132);
             this.panel5.TabIndex = 57;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(283, 97);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(128, 20);
+            this.textBox1.TabIndex = 59;
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.radioButton2);
@@ -630,13 +639,6 @@
             this.label12.TabIndex = 50;
             this.label12.Text = "Y";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(283, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 59;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,7 +667,7 @@
             this.Controls.Add(this.radioButton5);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.EmailAdd);
+            this.Controls.Add(this.Email);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.ContactNumber);
             this.Controls.Add(this.label8);
@@ -722,7 +724,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox ContactNumber;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox EmailAdd;
+        private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
