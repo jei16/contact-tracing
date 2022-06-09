@@ -63,13 +63,9 @@
             this.FirstName = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Symptomspanel = new System.Windows.Forms.Panel();
-            this.HasSymptoms = new System.Windows.Forms.RadioButton();
-            this.NoSymptoms = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.Month = new System.Windows.Forms.DomainUpDown();
             this.Day = new System.Windows.Forms.NumericUpDown();
@@ -77,17 +73,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.othersymptext = new System.Windows.Forms.TextBox();
-            this.Othersymp = new System.Windows.Forms.Label();
-            this.symptomslistt = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.Othersbutton = new System.Windows.Forms.RadioButton();
+            this.NoSymptoms = new System.Windows.Forms.RadioButton();
+            this.HasSymptoms = new System.Windows.Forms.RadioButton();
+            this.Othersymptext = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.Symptomspanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Day)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Year)).BeginInit();
-            this.symptomslistt.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -167,9 +163,10 @@
             // OtherTextBox
             // 
             this.OtherTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.OtherTextBox.Location = new System.Drawing.Point(58, 87);
+            this.OtherTextBox.Location = new System.Drawing.Point(22, 105);
             this.OtherTextBox.Name = "OtherTextBox";
-            this.OtherTextBox.Size = new System.Drawing.Size(178, 20);
+            this.OtherTextBox.ReadOnly = true;
+            this.OtherTextBox.Size = new System.Drawing.Size(214, 20);
             this.OtherTextBox.TabIndex = 10;
             this.OtherTextBox.TextChanged += new System.EventHandler(this.OtherTextBox_TextChanged);
             // 
@@ -356,6 +353,7 @@
             // cough
             // 
             this.cough.AutoSize = true;
+            this.cough.Enabled = false;
             this.cough.Location = new System.Drawing.Point(49, 543);
             this.cough.Name = "cough";
             this.cough.Size = new System.Drawing.Size(57, 17);
@@ -441,7 +439,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.Othersbutton);
             this.panel1.Controls.Add(this.FemaleButton);
             this.panel1.Controls.Add(this.MaleButton);
             this.panel1.Controls.Add(this.label4);
@@ -450,16 +448,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(239, 147);
             this.panel1.TabIndex = 53;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(18, 91);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 13);
-            this.label18.TabIndex = 11;
-            this.label18.Text = "Others:";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -485,38 +474,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(253, 46);
             this.panel4.TabIndex = 58;
-            // 
-            // Symptomspanel
-            // 
-            this.Symptomspanel.Controls.Add(this.HasSymptoms);
-            this.Symptomspanel.Controls.Add(this.NoSymptoms);
-            this.Symptomspanel.Location = new System.Drawing.Point(9, 456);
-            this.Symptomspanel.Name = "Symptomspanel";
-            this.Symptomspanel.Size = new System.Drawing.Size(246, 50);
-            this.Symptomspanel.TabIndex = 58;
-            this.Symptomspanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
-            // 
-            // HasSymptoms
-            // 
-            this.HasSymptoms.AutoSize = true;
-            this.HasSymptoms.Location = new System.Drawing.Point(121, 25);
-            this.HasSymptoms.Name = "HasSymptoms";
-            this.HasSymptoms.Size = new System.Drawing.Size(43, 17);
-            this.HasSymptoms.TabIndex = 60;
-            this.HasSymptoms.Text = "Yes";
-            this.HasSymptoms.UseVisualStyleBackColor = true;
-            this.HasSymptoms.CheckedChanged += new System.EventHandler(this.HasSymptoms_CheckedChanged);
-            // 
-            // NoSymptoms
-            // 
-            this.NoSymptoms.AutoSize = true;
-            this.NoSymptoms.Location = new System.Drawing.Point(48, 25);
-            this.NoSymptoms.Name = "NoSymptoms";
-            this.NoSymptoms.Size = new System.Drawing.Size(39, 17);
-            this.NoSymptoms.TabIndex = 59;
-            this.NoSymptoms.Text = "No";
-            this.NoSymptoms.UseVisualStyleBackColor = true;
-            this.NoSymptoms.CheckedChanged += new System.EventHandler(this.NoSymptoms_CheckedChanged);
             // 
             // label5
             // 
@@ -628,35 +585,6 @@
             this.label12.TabIndex = 50;
             this.label12.Text = "Y";
             // 
-            // othersymptext
-            // 
-            this.othersymptext.Location = new System.Drawing.Point(261, 91);
-            this.othersymptext.Name = "othersymptext";
-            this.othersymptext.ReadOnly = true;
-            this.othersymptext.Size = new System.Drawing.Size(179, 20);
-            this.othersymptext.TabIndex = 59;
-            this.othersymptext.TextChanged += new System.EventHandler(this.othersymptext_TextChanged);
-            // 
-            // Othersymp
-            // 
-            this.Othersymp.AutoSize = true;
-            this.Othersymp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Othersymp.Location = new System.Drawing.Point(261, 76);
-            this.Othersymp.Name = "Othersymp";
-            this.Othersymp.Size = new System.Drawing.Size(41, 13);
-            this.Othersymp.TabIndex = 60;
-            this.Othersymp.Text = "Others:";
-            // 
-            // symptomslistt
-            // 
-            this.symptomslistt.Controls.Add(this.Othersymp);
-            this.symptomslistt.Controls.Add(this.othersymptext);
-            this.symptomslistt.Location = new System.Drawing.Point(10, 512);
-            this.symptomslistt.Name = "symptomslistt";
-            this.symptomslistt.Size = new System.Drawing.Size(472, 132);
-            this.symptomslistt.TabIndex = 57;
-            this.symptomslistt.Paint += new System.Windows.Forms.PaintEventHandler(this.symptomslistt_Paint);
-            // 
             // panel6
             // 
             this.panel6.Location = new System.Drawing.Point(100, 65);
@@ -664,12 +592,67 @@
             this.panel6.Size = new System.Drawing.Size(168, 121);
             this.panel6.TabIndex = 59;
             // 
+            // Othersbutton
+            // 
+            this.Othersbutton.AutoSize = true;
+            this.Othersbutton.Location = new System.Drawing.Point(19, 88);
+            this.Othersbutton.Name = "Othersbutton";
+            this.Othersbutton.Size = new System.Drawing.Size(132, 17);
+            this.Othersbutton.TabIndex = 11;
+            this.Othersbutton.TabStop = true;
+            this.Othersbutton.Text = "Others (please specify)";
+            this.Othersbutton.UseVisualStyleBackColor = true;
+            this.Othersbutton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            // 
+            // NoSymptoms
+            // 
+            this.NoSymptoms.AutoSize = true;
+            this.NoSymptoms.Location = new System.Drawing.Point(49, 481);
+            this.NoSymptoms.Name = "NoSymptoms";
+            this.NoSymptoms.Size = new System.Drawing.Size(39, 17);
+            this.NoSymptoms.TabIndex = 59;
+            this.NoSymptoms.Text = "No";
+            this.NoSymptoms.UseVisualStyleBackColor = true;
+            this.NoSymptoms.CheckedChanged += new System.EventHandler(this.NoSymptoms_CheckedChanged);
+            // 
+            // HasSymptoms
+            // 
+            this.HasSymptoms.AutoSize = true;
+            this.HasSymptoms.Location = new System.Drawing.Point(128, 481);
+            this.HasSymptoms.Name = "HasSymptoms";
+            this.HasSymptoms.Size = new System.Drawing.Size(43, 17);
+            this.HasSymptoms.TabIndex = 60;
+            this.HasSymptoms.Text = "Yes";
+            this.HasSymptoms.UseVisualStyleBackColor = true;
+            this.HasSymptoms.CheckedChanged += new System.EventHandler(this.HasSymptoms_CheckedChanged);
+            // 
+            // Othersymptext
+            // 
+            this.Othersymptext.Location = new System.Drawing.Point(274, 609);
+            this.Othersymptext.Name = "Othersymptext";
+            this.Othersymptext.Size = new System.Drawing.Size(122, 20);
+            this.Othersymptext.TabIndex = 61;
+            this.Othersymptext.TextChanged += new System.EventHandler(this.Othersymptext_TextChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(271, 590);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.TabIndex = 62;
+            this.label17.Text = "Others:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(532, 690);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.Othersymptext);
+            this.Controls.Add(this.NoSymptoms);
+            this.Controls.Add(this.HasSymptoms);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SubmitButton);
@@ -707,8 +690,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.symptomslistt);
-            this.Controls.Add(this.Symptomspanel);
             this.Controls.Add(this.panel6);
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -719,12 +700,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.Symptomspanel.ResumeLayout(false);
-            this.Symptomspanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Day)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Year)).EndInit();
-            this.symptomslistt.ResumeLayout(false);
-            this.symptomslistt.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -770,9 +747,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel Symptomspanel;
-        private System.Windows.Forms.RadioButton NoSymptoms;
-        private System.Windows.Forms.RadioButton HasSymptoms;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DomainUpDown Month;
         private System.Windows.Forms.NumericUpDown Day;
@@ -780,11 +754,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox othersymptext;
-        private System.Windows.Forms.Label Othersymp;
-        private System.Windows.Forms.Panel symptomslistt;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.RadioButton Othersbutton;
+        private System.Windows.Forms.RadioButton NoSymptoms;
+        private System.Windows.Forms.RadioButton HasSymptoms;
+        private System.Windows.Forms.TextBox Othersymptext;
+        private System.Windows.Forms.Label label17;
     }
 }
 

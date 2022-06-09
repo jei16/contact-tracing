@@ -138,8 +138,9 @@ namespace contact_tracing
         private void cough_CheckedChanged(object sender, EventArgs e)
         {
             coughh = "Cough";
+            
         }
-
+        
         private void fever_CheckedChanged(object sender, EventArgs e)
         {
             feverr = "Fever";
@@ -170,10 +171,7 @@ namespace contact_tracing
 
         }
 
-        private void othersymptext_TextChanged(object sender, EventArgs e)
-        {
-            othersymp = othersymptext.Text;
-        }
+      
 
         private void OtherTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -188,17 +186,48 @@ namespace contact_tracing
         private void symptomslistt_Paint(object sender, PaintEventArgs e)
 
         {
-            
+           
                 if (HasSymptoms.Checked == true)
                 {
-                     cough.Enabled = true;
-                    
+                    cough.Enabled = true;
+
                 }
                 else
                 {
-                     cough.Enabled = false;
+                    cough.Enabled = false;
                 }
             
+
+        }
+
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+          if (Othersbutton.Checked == true)
+            {
+                OtherTextBox.ReadOnly = false;
+            }    
+          else
+            {
+                OtherTextBox.ReadOnly = true;
+                OtherTextBox.Text = " ";
+            }
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+                
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Othersymptext_TextChanged(object sender, EventArgs e)
+        {
+            othersymp = Othersymptext.Text;
         }
     }
 }
