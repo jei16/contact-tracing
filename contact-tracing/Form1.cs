@@ -43,7 +43,7 @@ namespace contact_tracing
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -182,6 +182,22 @@ namespace contact_tracing
 
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
+            
+        }
+
+        private void symptomslistt_Paint(object sender, PaintEventArgs e)
+
+        {
+            
+                if (HasSymptoms.Checked == true)
+                {
+                     cough.Enabled = true;
+                    
+                }
+                else
+                {
+                     cough.Enabled = false;
+                }
             
         }
     }

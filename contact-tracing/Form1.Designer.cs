@@ -79,7 +79,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.othersymptext = new System.Windows.Forms.TextBox();
             this.Othersymp = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.symptomslistt = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -87,7 +87,7 @@
             this.Symptomspanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Day)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Year)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.symptomslistt.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -356,7 +356,6 @@
             // cough
             // 
             this.cough.AutoSize = true;
-            this.cough.Enabled = false;
             this.cough.Location = new System.Drawing.Point(49, 543);
             this.cough.Name = "cough";
             this.cough.Size = new System.Drawing.Size(57, 17);
@@ -633,6 +632,7 @@
             // 
             this.othersymptext.Location = new System.Drawing.Point(261, 91);
             this.othersymptext.Name = "othersymptext";
+            this.othersymptext.ReadOnly = true;
             this.othersymptext.Size = new System.Drawing.Size(179, 20);
             this.othersymptext.TabIndex = 59;
             this.othersymptext.TextChanged += new System.EventHandler(this.othersymptext_TextChanged);
@@ -640,20 +640,22 @@
             // Othersymp
             // 
             this.Othersymp.AutoSize = true;
+            this.Othersymp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Othersymp.Location = new System.Drawing.Point(261, 76);
             this.Othersymp.Name = "Othersymp";
             this.Othersymp.Size = new System.Drawing.Size(41, 13);
             this.Othersymp.TabIndex = 60;
             this.Othersymp.Text = "Others:";
             // 
-            // panel5
+            // symptomslistt
             // 
-            this.panel5.Controls.Add(this.Othersymp);
-            this.panel5.Controls.Add(this.othersymptext);
-            this.panel5.Location = new System.Drawing.Point(10, 512);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(472, 132);
-            this.panel5.TabIndex = 57;
+            this.symptomslistt.Controls.Add(this.Othersymp);
+            this.symptomslistt.Controls.Add(this.othersymptext);
+            this.symptomslistt.Location = new System.Drawing.Point(10, 512);
+            this.symptomslistt.Name = "symptomslistt";
+            this.symptomslistt.Size = new System.Drawing.Size(472, 132);
+            this.symptomslistt.TabIndex = 57;
+            this.symptomslistt.Paint += new System.Windows.Forms.PaintEventHandler(this.symptomslistt_Paint);
             // 
             // panel6
             // 
@@ -705,7 +707,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.symptomslistt);
             this.Controls.Add(this.Symptomspanel);
             this.Controls.Add(this.panel6);
             this.MaximizeBox = false;
@@ -721,8 +723,8 @@
             this.Symptomspanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Day)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Year)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.symptomslistt.ResumeLayout(false);
+            this.symptomslistt.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -781,7 +783,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox othersymptext;
         private System.Windows.Forms.Label Othersymp;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel symptomslistt;
         private System.Windows.Forms.Panel panel6;
     }
 }
