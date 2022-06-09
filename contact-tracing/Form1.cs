@@ -25,7 +25,8 @@ namespace contact_tracing
         string runnynosee;
         string losssmelltaste;
         string othersymp;
-        int leapyear;
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -75,93 +76,10 @@ namespace contact_tracing
                 Day.Maximum = 31;
             }
 
-
-            if (Month.Text == "February" && Year.Value == 1904)
+            if (Month.Text == "February")
             {
                 Day.Minimum = 1;
                 Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1904)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1908)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1908)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1912)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1912)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1916)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1916)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1920)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1920)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1924)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1924)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1928)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1928)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1932)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1932)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
             }
 
 
@@ -238,20 +156,32 @@ namespace contact_tracing
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            StreamWriter file = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\test.txt");
+            StreamWriter file = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\Contact Tracing.txt");
             file.WriteLine("First Name:" + " " + FirstName.Text);
             file.WriteLine("Middle Name:" + " " + MiddleName.Text);
             file.WriteLine("Last Name:" + " " + LastName.Text);
+            file.WriteLine( " " );
             file.WriteLine("Age:" + " " + Age.Text);
+            file.WriteLine(" ");
             file.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
+            file.WriteLine(" ");
             file.WriteLine("Gender:" + " " + gender);
+            file.WriteLine(" ");
             file.WriteLine("Address:" + " " + Address.Text);
+            file.WriteLine(" ");
             file.WriteLine("Contact number:" + " " + ContactNumber.Text);
+            file.WriteLine(" ");
             file.WriteLine("Email:" + " " + Email.Text);
+            file.WriteLine(" ");
             file.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
+            file.WriteLine(" ");
             file.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
+            file.WriteLine(" ");
             file.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
+            file.WriteLine(" ");
             file.WriteLine("Symptoms list:" + " " + coughh + " / " + feverr + " / "+ sorethroatt + " / " + shortbreath+  " / " + runnynosee + " / " +losssmelltaste + " / " + othersymp );
+            file.WriteLine(" ");
+            file.WriteLine(" ");
 
             file.Close();
 
@@ -425,95 +355,10 @@ namespace contact_tracing
 
         private void Year_ValueChanged(object sender, EventArgs e)
         {
-            
+           
 
-            if (Month.Text == "February" && Year.Value == 1904)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1904)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
 
-            if (Month.Text == "February" && Year.Value == 1908)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1908)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
 
-            if (Month.Text == "February" && Year.Value == 1912)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1912)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1916)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1916)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1920)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1920)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1924)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1924)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1928)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1928)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1932)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1932)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
 
 
 
@@ -528,94 +373,9 @@ namespace contact_tracing
 
         private void Day_ValueChanged(object sender, EventArgs e)
         {
+          
 
-            if (Month.Text == "February" && Year.Value == 1904)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1904)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
 
-            if (Month.Text == "February" && Year.Value == 1908)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1908)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1912)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1912)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1916)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1916)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1920)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1920)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1924)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1924)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1928)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1928)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
-
-            if (Month.Text == "February" && Year.Value == 1932)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-            else if (Month.Text == "February" && Year.Value != 1932)
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 28;
-            }
 
         }
     }
