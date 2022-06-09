@@ -17,6 +17,13 @@ namespace contact_tracing
         string vaccinated;
         string booster;
         string symptoms;
+        string coughh;
+        string feverr;
+        string sorethroatt;
+        string shortbreath;
+        string runnynosee;
+        string losssmelltaste;
+
         public Form1()
         {
             InitializeComponent();
@@ -78,11 +85,7 @@ namespace contact_tracing
             file.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
             file.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
             file.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
-
-
-
-
-
+            file.WriteLine("Symptoms list:" + " " + coughh + " "+ feverr);
 
             file.Close();
 
@@ -133,6 +136,41 @@ namespace contact_tracing
         private void HasSymptoms_CheckedChanged(object sender, EventArgs e)
         {
             symptoms = "Yes";
+        }
+
+        private void cough_CheckedChanged(object sender, EventArgs e)
+        {
+            coughh = "Cough";
+        }
+
+        private void fever_CheckedChanged(object sender, EventArgs e)
+        {
+            feverr = "Fever";
+        }
+
+        private void sorethroat_CheckedChanged(object sender, EventArgs e)
+        {
+            sorethroatt = "Sore throat";
+        }
+
+        private void shortnessofbreath_CheckedChanged(object sender, EventArgs e)
+        {
+            shortbreath = "Shortness of breath";
+        }
+
+        private void runnynose_CheckedChanged(object sender, EventArgs e)
+        {
+            runnynosee = "Runny nose";
+        }
+
+        private void lossofsmellortaste_CheckedChanged(object sender, EventArgs e)
+        {
+            losssmelltaste = "Loss of smell or taste";
+        }
+
+        private void othersymp_CheckedChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

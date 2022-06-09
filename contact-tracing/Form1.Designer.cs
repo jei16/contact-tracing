@@ -59,8 +59,8 @@
             this.fever = new System.Windows.Forms.CheckBox();
             this.sorethroat = new System.Windows.Forms.CheckBox();
             this.shortnessofbreath = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.othersymp = new System.Windows.Forms.CheckBox();
+            this.lossofsmellortaste = new System.Windows.Forms.CheckBox();
             this.runnynose = new System.Windows.Forms.CheckBox();
             this.FirstName = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
@@ -69,7 +69,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.othersymptext = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.HasSymptoms = new System.Windows.Forms.RadioButton();
             this.NoSymptoms = new System.Windows.Forms.RadioButton();
@@ -371,6 +371,7 @@
             this.cough.TabIndex = 38;
             this.cough.Text = "Cough";
             this.cough.UseVisualStyleBackColor = true;
+            this.cough.CheckedChanged += new System.EventHandler(this.cough_CheckedChanged);
             // 
             // fever
             // 
@@ -381,6 +382,7 @@
             this.fever.TabIndex = 39;
             this.fever.Text = "Fever";
             this.fever.UseVisualStyleBackColor = true;
+            this.fever.CheckedChanged += new System.EventHandler(this.fever_CheckedChanged);
             // 
             // sorethroat
             // 
@@ -391,6 +393,7 @@
             this.sorethroat.TabIndex = 40;
             this.sorethroat.Text = "Sore throat";
             this.sorethroat.UseVisualStyleBackColor = true;
+            this.sorethroat.CheckedChanged += new System.EventHandler(this.sorethroat_CheckedChanged);
             // 
             // shortnessofbreath
             // 
@@ -401,26 +404,29 @@
             this.shortnessofbreath.TabIndex = 41;
             this.shortnessofbreath.Text = "Shortness of breath";
             this.shortnessofbreath.UseVisualStyleBackColor = true;
+            this.shortnessofbreath.CheckedChanged += new System.EventHandler(this.shortnessofbreath_CheckedChanged);
             // 
-            // checkBox6
+            // othersymp
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(272, 589);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(60, 17);
-            this.checkBox6.TabIndex = 44;
-            this.checkBox6.Text = "Others:";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.othersymp.AutoSize = true;
+            this.othersymp.Location = new System.Drawing.Point(272, 589);
+            this.othersymp.Name = "othersymp";
+            this.othersymp.Size = new System.Drawing.Size(60, 17);
+            this.othersymp.TabIndex = 44;
+            this.othersymp.Text = "Others:";
+            this.othersymp.UseVisualStyleBackColor = true;
+            this.othersymp.CheckedChanged += new System.EventHandler(this.othersymp_CheckedChanged);
             // 
-            // checkBox7
+            // lossofsmellortaste
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(272, 566);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(124, 17);
-            this.checkBox7.TabIndex = 43;
-            this.checkBox7.Text = "Loss of smell or taste";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.lossofsmellortaste.AutoSize = true;
+            this.lossofsmellortaste.Location = new System.Drawing.Point(272, 566);
+            this.lossofsmellortaste.Name = "lossofsmellortaste";
+            this.lossofsmellortaste.Size = new System.Drawing.Size(124, 17);
+            this.lossofsmellortaste.TabIndex = 43;
+            this.lossofsmellortaste.Text = "Loss of smell or taste";
+            this.lossofsmellortaste.UseVisualStyleBackColor = true;
+            this.lossofsmellortaste.CheckedChanged += new System.EventHandler(this.lossofsmellortaste_CheckedChanged);
             // 
             // runnynose
             // 
@@ -431,6 +437,7 @@
             this.runnynose.TabIndex = 42;
             this.runnynose.Text = "Runny nose";
             this.runnynose.UseVisualStyleBackColor = true;
+            this.runnynose.CheckedChanged += new System.EventHandler(this.runnynose_CheckedChanged);
             // 
             // FirstName
             // 
@@ -490,18 +497,18 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.othersymptext);
             this.panel5.Location = new System.Drawing.Point(10, 512);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(443, 132);
             this.panel5.TabIndex = 57;
             // 
-            // textBox1
+            // othersymptext
             // 
-            this.textBox1.Location = new System.Drawing.Point(283, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 59;
+            this.othersymptext.Location = new System.Drawing.Point(283, 97);
+            this.othersymptext.Name = "othersymptext";
+            this.othersymptext.Size = new System.Drawing.Size(128, 20);
+            this.othersymptext.TabIndex = 59;
             // 
             // panel6
             // 
@@ -661,8 +668,8 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Year);
             this.Controls.Add(this.Day);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox7);
+            this.Controls.Add(this.othersymp);
+            this.Controls.Add(this.lossofsmellortaste);
             this.Controls.Add(this.runnynose);
             this.Controls.Add(this.shortnessofbreath);
             this.Controls.Add(this.sorethroat);
@@ -745,8 +752,8 @@
         private System.Windows.Forms.CheckBox fever;
         private System.Windows.Forms.CheckBox sorethroat;
         private System.Windows.Forms.CheckBox shortnessofbreath;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox othersymp;
+        private System.Windows.Forms.CheckBox lossofsmellortaste;
         private System.Windows.Forms.CheckBox runnynose;
         private System.Windows.Forms.TextBox FirstName;
         private System.Windows.Forms.Button SubmitButton;
@@ -765,7 +772,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox othersymptext;
     }
 }
 
