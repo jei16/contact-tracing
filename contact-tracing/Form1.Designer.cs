@@ -466,6 +466,7 @@
             0,
             0,
             0});
+            this.Day.ValueChanged += new System.EventHandler(this.Day_ValueChanged);
             // 
             // Year
             // 

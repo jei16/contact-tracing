@@ -25,7 +25,7 @@ namespace contact_tracing
         string runnynosee;
         string losssmelltaste;
         string othersymp;
-        
+        int leapyear;
         public Form1()
         {
             InitializeComponent();
@@ -75,7 +75,96 @@ namespace contact_tracing
                 Day.Maximum = 31;
             }
 
-            
+
+            if (Month.Text == "February" && Year.Value == 1904)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1904)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1908)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1908)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1912)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1912)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1916)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1916)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1920)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1920)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1924)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1924)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1928)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1928)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1932)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1932)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+
 
             if (Month.Text == "March")
             {
@@ -230,6 +319,13 @@ namespace contact_tracing
                 lossofsmellortaste.Enabled = false;
                 Othersymptext.Enabled = false;
                 Othersymptext.Text = " ";
+                cough.Checked = false;
+                fever.Checked = false;
+                sorethroat.Checked = false;
+                shortnessofbreath.Checked = false;
+                runnynose.Checked = false;
+                lossofsmellortaste.Checked = false;
+                Othersymptext.Enabled = false;
             }
         }
 
@@ -329,20 +425,197 @@ namespace contact_tracing
 
         private void Year_ValueChanged(object sender, EventArgs e)
         {
-            int leapyear = 1904| 1908| 1912| 1916| 1920| 1924| 1928| 1932| 1936|  1940| 1944| 1948| 1952| 1956| 1960| 1964| 1968|1972| 1976|1980| 1984| 1988|1992| 1996|2000|2004| 2008| 2012| 2016| 2020;
             
 
-            if (Month.Text == "February" && Year.Value == leapyear)
+            if (Month.Text == "February" && Year.Value == 1904)
             {
                 Day.Minimum = 1;
                 Day.Maximum = 29;
             }
-            else if (Month.Text == "February" && Year.Value != leapyear)
+            else if (Month.Text == "February" && Year.Value != 1904)
             {
                 Day.Minimum = 1;
                 Day.Maximum = 28;
             }
 
+            if (Month.Text == "February" && Year.Value == 1908)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1908)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1912)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1912)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1916)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1916)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1920)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1920)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1924)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1924)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1928)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1928)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1932)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1932)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private void Day_ValueChanged(object sender, EventArgs e)
+        {
+
+            if (Month.Text == "February" && Year.Value == 1904)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1904)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1908)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1908)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1912)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1912)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1916)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1916)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1920)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1920)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1924)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1924)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1928)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1928)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
+
+            if (Month.Text == "February" && Year.Value == 1932)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
+            else if (Month.Text == "February" && Year.Value != 1932)
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 28;
+            }
 
         }
     }
