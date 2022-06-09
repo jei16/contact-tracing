@@ -16,6 +16,7 @@ namespace contact_tracing
         string gender;
         string vaccinated;
         string booster;
+        string symptoms;
         public Form1()
         {
             InitializeComponent();
@@ -76,6 +77,7 @@ namespace contact_tracing
             file.WriteLine("Email:" + " " + Email.Text);
             file.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
             file.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
+            file.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
 
 
 
@@ -121,6 +123,16 @@ namespace contact_tracing
         private void HasBooster_CheckedChanged(object sender, EventArgs e)
         {
             booster = "Yes";
+        }
+
+        private void NoSymptoms_CheckedChanged(object sender, EventArgs e)
+        {
+            symptoms = "No";
+        }
+
+        private void HasSymptoms_CheckedChanged(object sender, EventArgs e)
+        {
+            symptoms = "Yes";
         }
     }
 }

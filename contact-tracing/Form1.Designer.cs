@@ -55,13 +55,13 @@
             this.HasBooster = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.cough = new System.Windows.Forms.CheckBox();
+            this.fever = new System.Windows.Forms.CheckBox();
+            this.sorethroat = new System.Windows.Forms.CheckBox();
+            this.shortnessofbreath = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.runnynose = new System.Windows.Forms.CheckBox();
             this.FirstName = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -71,8 +71,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.HasSymptoms = new System.Windows.Forms.RadioButton();
+            this.NoSymptoms = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.Month = new System.Windows.Forms.DomainUpDown();
             this.Day = new System.Windows.Forms.NumericUpDown();
@@ -362,45 +362,45 @@
             this.label16.TabIndex = 37;
             this.label16.Text = "If yes, please specify";
             // 
-            // checkBox1
+            // cough
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(49, 543);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(57, 17);
-            this.checkBox1.TabIndex = 38;
-            this.checkBox1.Text = "Cough";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cough.AutoSize = true;
+            this.cough.Location = new System.Drawing.Point(49, 543);
+            this.cough.Name = "cough";
+            this.cough.Size = new System.Drawing.Size(57, 17);
+            this.cough.TabIndex = 38;
+            this.cough.Text = "Cough";
+            this.cough.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // fever
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(49, 566);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(53, 17);
-            this.checkBox2.TabIndex = 39;
-            this.checkBox2.Text = "Fever";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.fever.AutoSize = true;
+            this.fever.Location = new System.Drawing.Point(49, 566);
+            this.fever.Name = "fever";
+            this.fever.Size = new System.Drawing.Size(53, 17);
+            this.fever.TabIndex = 39;
+            this.fever.Text = "Fever";
+            this.fever.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // sorethroat
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(49, 589);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(78, 17);
-            this.checkBox3.TabIndex = 40;
-            this.checkBox3.Text = "Sore throat";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.sorethroat.AutoSize = true;
+            this.sorethroat.Location = new System.Drawing.Point(49, 589);
+            this.sorethroat.Name = "sorethroat";
+            this.sorethroat.Size = new System.Drawing.Size(78, 17);
+            this.sorethroat.TabIndex = 40;
+            this.sorethroat.Text = "Sore throat";
+            this.sorethroat.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // shortnessofbreath
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(49, 612);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(118, 17);
-            this.checkBox4.TabIndex = 41;
-            this.checkBox4.Text = "Shortness of breath";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.shortnessofbreath.AutoSize = true;
+            this.shortnessofbreath.Location = new System.Drawing.Point(49, 612);
+            this.shortnessofbreath.Name = "shortnessofbreath";
+            this.shortnessofbreath.Size = new System.Drawing.Size(118, 17);
+            this.shortnessofbreath.TabIndex = 41;
+            this.shortnessofbreath.Text = "Shortness of breath";
+            this.shortnessofbreath.UseVisualStyleBackColor = true;
             // 
             // checkBox6
             // 
@@ -422,15 +422,15 @@
             this.checkBox7.Text = "Loss of smell or taste";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // runnynose
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(272, 543);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(83, 17);
-            this.checkBox8.TabIndex = 42;
-            this.checkBox8.Text = "Runny nose";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.runnynose.AutoSize = true;
+            this.runnynose.Location = new System.Drawing.Point(272, 543);
+            this.runnynose.Name = "runnynose";
+            this.runnynose.Size = new System.Drawing.Size(83, 17);
+            this.runnynose.TabIndex = 42;
+            this.runnynose.Text = "Runny nose";
+            this.runnynose.UseVisualStyleBackColor = true;
             // 
             // FirstName
             // 
@@ -505,40 +505,42 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.radioButton2);
-            this.panel6.Controls.Add(this.radioButton1);
+            this.panel6.Controls.Add(this.HasSymptoms);
+            this.panel6.Controls.Add(this.NoSymptoms);
             this.panel6.Location = new System.Drawing.Point(9, 456);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(246, 52);
             this.panel6.TabIndex = 58;
             // 
-            // radioButton2
+            // HasSymptoms
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(121, 25);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(43, 17);
-            this.radioButton2.TabIndex = 60;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Yes";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.HasSymptoms.AutoSize = true;
+            this.HasSymptoms.Location = new System.Drawing.Point(121, 25);
+            this.HasSymptoms.Name = "HasSymptoms";
+            this.HasSymptoms.Size = new System.Drawing.Size(43, 17);
+            this.HasSymptoms.TabIndex = 60;
+            this.HasSymptoms.TabStop = true;
+            this.HasSymptoms.Text = "Yes";
+            this.HasSymptoms.UseVisualStyleBackColor = true;
+            this.HasSymptoms.CheckedChanged += new System.EventHandler(this.HasSymptoms_CheckedChanged);
             // 
-            // radioButton1
+            // NoSymptoms
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(48, 25);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(39, 17);
-            this.radioButton1.TabIndex = 59;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "No";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.NoSymptoms.AutoSize = true;
+            this.NoSymptoms.Location = new System.Drawing.Point(48, 25);
+            this.NoSymptoms.Name = "NoSymptoms";
+            this.NoSymptoms.Size = new System.Drawing.Size(39, 17);
+            this.NoSymptoms.TabIndex = 59;
+            this.NoSymptoms.TabStop = true;
+            this.NoSymptoms.Text = "No";
+            this.NoSymptoms.UseVisualStyleBackColor = true;
+            this.NoSymptoms.CheckedChanged += new System.EventHandler(this.NoSymptoms_CheckedChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(123, 75);
+            this.label5.Location = new System.Drawing.Point(111, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 11;
@@ -560,7 +562,7 @@
             this.Month.Items.Add("October ");
             this.Month.Items.Add("November");
             this.Month.Items.Add("December");
-            this.Month.Location = new System.Drawing.Point(148, 100);
+            this.Month.Location = new System.Drawing.Point(136, 100);
             this.Month.Name = "Month";
             this.Month.Size = new System.Drawing.Size(120, 20);
             this.Month.TabIndex = 13;
@@ -569,7 +571,7 @@
             // 
             // Day
             // 
-            this.Day.Location = new System.Drawing.Point(148, 126);
+            this.Day.Location = new System.Drawing.Point(136, 126);
             this.Day.Maximum = new decimal(new int[] {
             31,
             0,
@@ -591,7 +593,7 @@
             // 
             // Year
             // 
-            this.Year.Location = new System.Drawing.Point(148, 152);
+            this.Year.Location = new System.Drawing.Point(136, 152);
             this.Year.Maximum = new decimal(new int[] {
             2022,
             0,
@@ -616,7 +618,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(126, 103);
+            this.label10.Location = new System.Drawing.Point(114, 103);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 13);
             this.label10.TabIndex = 48;
@@ -627,7 +629,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(126, 128);
+            this.label11.Location = new System.Drawing.Point(114, 128);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 13);
             this.label11.TabIndex = 49;
@@ -638,7 +640,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(126, 154);
+            this.label12.Location = new System.Drawing.Point(114, 154);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(14, 13);
             this.label12.TabIndex = 50;
@@ -661,11 +663,11 @@
             this.Controls.Add(this.Day);
             this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.runnynose);
+            this.Controls.Add(this.shortnessofbreath);
+            this.Controls.Add(this.sorethroat);
+            this.Controls.Add(this.fever);
+            this.Controls.Add(this.cough);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.fullyvac);
@@ -739,13 +741,13 @@
         private System.Windows.Forms.RadioButton HasBooster;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox cough;
+        private System.Windows.Forms.CheckBox fever;
+        private System.Windows.Forms.CheckBox sorethroat;
+        private System.Windows.Forms.CheckBox shortnessofbreath;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox runnynose;
         private System.Windows.Forms.TextBox FirstName;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Panel panel1;
@@ -754,8 +756,8 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton NoSymptoms;
+        private System.Windows.Forms.RadioButton HasSymptoms;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DomainUpDown Month;
         private System.Windows.Forms.NumericUpDown Day;
