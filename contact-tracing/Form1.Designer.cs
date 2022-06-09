@@ -35,8 +35,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.MaleButton = new System.Windows.Forms.RadioButton();
             this.FemaleButton = new System.Windows.Forms.RadioButton();
-            this.OtherButton = new System.Windows.Forms.RadioButton();
-            this.Other = new System.Windows.Forms.TextBox();
+            this.OtherTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.LastName = new System.Windows.Forms.TextBox();
@@ -65,6 +64,7 @@
             this.FirstName = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -127,6 +127,7 @@
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(57, 30);
             this.Age.TabIndex = 5;
+            this.Age.TabStop = false;
             // 
             // label4
             // 
@@ -141,7 +142,7 @@
             // MaleButton
             // 
             this.MaleButton.AutoSize = true;
-            this.MaleButton.Location = new System.Drawing.Point(19, 38);
+            this.MaleButton.Location = new System.Drawing.Point(19, 33);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Size = new System.Drawing.Size(48, 17);
             this.MaleButton.TabIndex = 7;
@@ -153,7 +154,7 @@
             // FemaleButton
             // 
             this.FemaleButton.AutoSize = true;
-            this.FemaleButton.Location = new System.Drawing.Point(19, 61);
+            this.FemaleButton.Location = new System.Drawing.Point(19, 59);
             this.FemaleButton.Name = "FemaleButton";
             this.FemaleButton.Size = new System.Drawing.Size(59, 17);
             this.FemaleButton.TabIndex = 8;
@@ -162,25 +163,14 @@
             this.FemaleButton.UseVisualStyleBackColor = true;
             this.FemaleButton.CheckedChanged += new System.EventHandler(this.FemaleButton_CheckedChanged);
             // 
-            // OtherButton
+            // OtherTextBox
             // 
-            this.OtherButton.AutoSize = true;
-            this.OtherButton.Location = new System.Drawing.Point(19, 84);
-            this.OtherButton.Name = "OtherButton";
-            this.OtherButton.Size = new System.Drawing.Size(128, 17);
-            this.OtherButton.TabIndex = 9;
-            this.OtherButton.TabStop = true;
-            this.OtherButton.Text = "Other (Please specify)";
-            this.OtherButton.UseVisualStyleBackColor = true;
-            this.OtherButton.CheckedChanged += new System.EventHandler(this.OtherButton_CheckedChanged);
-            // 
-            // Other
-            // 
-            this.Other.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.Other.Location = new System.Drawing.Point(19, 107);
-            this.Other.Name = "Other";
-            this.Other.Size = new System.Drawing.Size(209, 20);
-            this.Other.TabIndex = 10;
+            this.OtherTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.OtherTextBox.Location = new System.Drawing.Point(58, 81);
+            this.OtherTextBox.Name = "OtherTextBox";
+            this.OtherTextBox.Size = new System.Drawing.Size(178, 20);
+            this.OtherTextBox.TabIndex = 10;
+            this.OtherTextBox.TextChanged += new System.EventHandler(this.OtherTextBox_TextChanged);
             // 
             // label6
             // 
@@ -446,6 +436,7 @@
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(156, 30);
             this.FirstName.TabIndex = 51;
+            this.FirstName.TabStop = false;
             this.FirstName.TextChanged += new System.EventHandler(this.FirstName_TextChanged);
             // 
             // SubmitButton
@@ -454,21 +445,31 @@
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 52;
-            this.SubmitButton.Text = "Submit";
+            this.SubmitButton.Text = "Save";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.Other);
-            this.panel1.Controls.Add(this.OtherButton);
+            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.FemaleButton);
             this.panel1.Controls.Add(this.MaleButton);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.OtherTextBox);
             this.panel1.Location = new System.Drawing.Point(274, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(239, 147);
             this.panel1.TabIndex = 53;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(18, 83);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "Others:";
             // 
             // panel2
             // 
@@ -509,6 +510,7 @@
             this.othersymptext.Name = "othersymptext";
             this.othersymptext.Size = new System.Drawing.Size(128, 20);
             this.othersymptext.TabIndex = 59;
+            this.othersymptext.TextChanged += new System.EventHandler(this.othersymptext_TextChanged);
             // 
             // panel6
             // 
@@ -615,7 +617,7 @@
             this.Year.Size = new System.Drawing.Size(120, 20);
             this.Year.TabIndex = 47;
             this.Year.Value = new decimal(new int[] {
-            1900,
+            1980,
             0,
             0,
             0});
@@ -728,8 +730,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton MaleButton;
         private System.Windows.Forms.RadioButton FemaleButton;
-        private System.Windows.Forms.RadioButton OtherButton;
-        private System.Windows.Forms.TextBox Other;
+        private System.Windows.Forms.TextBox OtherTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox Address;
         private System.Windows.Forms.TextBox LastName;
@@ -773,6 +774,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox othersymptext;
+        private System.Windows.Forms.Label label18;
     }
 }
 

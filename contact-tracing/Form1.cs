@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 
 namespace contact_tracing
-{   
+{
     public partial class Form1 : Form
     {
         string gender;
@@ -23,7 +23,6 @@ namespace contact_tracing
         string shortbreath;
         string runnynosee;
         string losssmelltaste;
-
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +35,7 @@ namespace contact_tracing
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,7 +60,7 @@ namespace contact_tracing
 
         private void FirstName_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Month_SelectedItemChanged(object sender, EventArgs e)
@@ -73,7 +72,7 @@ namespace contact_tracing
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             StreamWriter file = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\test.txt");
-            file.WriteLine("First Name:"+" "+FirstName.Text);
+            file.WriteLine("First Name:" + " " + FirstName.Text);
             file.WriteLine("Middle Name:" + " " + MiddleName.Text);
             file.WriteLine("Last Name:" + " " + LastName.Text);
             file.WriteLine("Age:" + " " + Age.Text);
@@ -85,7 +84,7 @@ namespace contact_tracing
             file.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
             file.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
             file.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
-            file.WriteLine("Symptoms list:" + " " + coughh + " "+ feverr);
+            file.WriteLine("Symptoms list:" + " " + coughh + " " + feverr + " ");
 
             file.Close();
 
@@ -97,11 +96,6 @@ namespace contact_tracing
             gender = "Female";
         }
 
-        private void OtherButton_CheckedChanged(object sender, EventArgs e)
-        {
-            gender = Other.Text;
-     
-        }
 
         private void NoVac_CheckedChanged(object sender, EventArgs e)
         {
@@ -170,7 +164,20 @@ namespace contact_tracing
 
         private void othersymp_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
+
+        private void othersymptext_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OtherTextBox_TextChanged(object sender, EventArgs e)
+        {
+            gender = OtherTextBox.Text;
+        }
+
+
+       
     }
 }
