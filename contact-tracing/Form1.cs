@@ -75,6 +75,8 @@ namespace contact_tracing
             file.WriteLine("Contact number:" + " " + ContactNumber.Text);
             file.WriteLine("Email:" + " " + Email.Text);
             file.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
+            file.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
+
 
 
 
@@ -109,6 +111,16 @@ namespace contact_tracing
         private void fullyvac_CheckedChanged(object sender, EventArgs e)
         {
             vaccinated = "Yes, Fully Vaccinated (1st and 2nd Dose)";
+        }
+
+        private void NoBooster_CheckedChanged(object sender, EventArgs e)
+        {
+            booster = "No";
+        }
+
+        private void HasBooster_CheckedChanged(object sender, EventArgs e)
+        {
+            booster = "Yes";
         }
     }
 }

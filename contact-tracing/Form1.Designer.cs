@@ -328,6 +328,7 @@
             this.NoBooster.TabStop = true;
             this.NoBooster.Text = "No";
             this.NoBooster.UseVisualStyleBackColor = true;
+            this.NoBooster.CheckedChanged += new System.EventHandler(this.NoBooster_CheckedChanged);
             // 
             // HasBooster
             // 
@@ -339,6 +340,7 @@
             this.HasBooster.TabStop = true;
             this.HasBooster.Text = "Yes";
             this.HasBooster.UseVisualStyleBackColor = true;
+            this.HasBooster.CheckedChanged += new System.EventHandler(this.HasBooster_CheckedChanged);
             // 
             // label15
             // 
