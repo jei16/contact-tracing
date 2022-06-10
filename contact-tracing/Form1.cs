@@ -186,7 +186,7 @@ namespace contact_tracing
             }
             else
             {
-                file.WriteLine("Symptoms list:" + " "+ "None");
+                file.WriteLine("") ;
             }
 
             file.WriteLine(" ");
