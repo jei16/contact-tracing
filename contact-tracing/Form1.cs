@@ -38,10 +38,6 @@ namespace contact_tracing
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -51,16 +47,6 @@ namespace contact_tracing
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             gender = "Male";
-        }
-
-        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton9_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void FirstName_TextChanged(object sender, EventArgs e)
@@ -143,14 +129,6 @@ namespace contact_tracing
                 Day.Minimum = 1;
                 Day.Maximum = 31;
             }
-
-            
-
-
-
-
-
-
         }
 
 
@@ -271,14 +249,7 @@ namespace contact_tracing
 
         private void cough_CheckedChanged(object sender, EventArgs e)
         {
-
             coughh = "Cough";
-           
-
-           
-
-            
-
         }
         
         private void fever_CheckedChanged(object sender, EventArgs e)
@@ -305,22 +276,11 @@ namespace contact_tracing
         {
             losssmelltaste = "Loss of smell or taste";
         }
-
-        private void othersymp_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
       
 
         private void OtherTextBox_TextChanged(object sender, EventArgs e)
         {
             gender = OtherTextBox.Text;
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-            
         }
 
 
@@ -337,27 +297,12 @@ namespace contact_tracing
             }
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-      
-
-        private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void Othersymptext_TextChanged(object sender, EventArgs e)
         {
             othersymp = Othersymptext.Text;
         }
 
-        private void othersymptext_TextChanged(object sender, EventArgs e)
-        {
-
-        } 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -373,26 +318,11 @@ namespace contact_tracing
         {
            
 
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         private void Day_ValueChanged(object sender, EventArgs e)
         {
-          
-
-
-
+         
         }
     }
 }
