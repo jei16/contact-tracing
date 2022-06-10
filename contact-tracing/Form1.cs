@@ -179,8 +179,16 @@ namespace contact_tracing
             file.WriteLine(" ");
             file.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
             file.WriteLine(" ");
-            file.WriteLine("Symptoms list:" + " " + coughh + " / " + feverr + " / "+ sorethroatt + " / " + shortbreath+  " / " + runnynosee + " / " +losssmelltaste + " / " + othersymp );
-            file.WriteLine(" ");
+
+            if (NoSymptoms.Checked == false)
+            {
+                file.WriteLine("Symptoms list:" + " " + coughh + " / " + feverr + " / " + sorethroatt + " / " + shortbreath + " / " + runnynosee + " / " + losssmelltaste + " / " + othersymp);
+            }
+            else
+            {
+                file.WriteLine("Symptoms list:" + " "+ "None");
+            }
+
             file.WriteLine(" ");
 
             file.Close();
@@ -261,8 +269,14 @@ namespace contact_tracing
 
         private void cough_CheckedChanged(object sender, EventArgs e)
         {
+
             coughh = "Cough";
+           
+
+           
+
             
+
         }
         
         private void fever_CheckedChanged(object sender, EventArgs e)
