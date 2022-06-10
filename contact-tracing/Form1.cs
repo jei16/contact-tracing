@@ -190,6 +190,8 @@ namespace contact_tracing
             }
 
             file.WriteLine(" ");
+            file.WriteLine(" ------------------------------------------- ");
+            file.WriteLine(" ");
 
             file.Close();
 
