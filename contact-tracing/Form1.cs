@@ -12,7 +12,7 @@ using System.IO;
 
 namespace contact_tracing
 {
-    public partial class Form1 : Form
+    public partial class Firstpage : Form
     {
         string gender;
         string vaccinated;
@@ -25,13 +25,16 @@ namespace contact_tracing
         string runnynosee;
         string losssmelltaste;
         string othersymp;
+        
 
-        Form1 instance;
-        public Form1()
+        public static Firstpage instance;
+        public Firstpage()
         {
             InitializeComponent();
             instance = this;
+
         }
+
 
 
         private void label2_Click(object sender, EventArgs e)
@@ -57,79 +60,82 @@ namespace contact_tracing
 
         private void Month_SelectedItemChanged(object sender, EventArgs e)
         {
-            if (Month.Text == "January")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
+            
+                if (Month.Text == "January")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 31;
+                }
 
-            if (Month.Text == "February")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
            
-         
+                if (Month.Text == "February")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 29;
+                }
 
-            if (Month.Text == "March")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
 
-            if(Month.Text == "April")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 30;
-            }
+                if (Month.Text == "March")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 31;
+                }
 
-            if (Month.Text == "May")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
+                if (Month.Text == "April")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 30;
+                }
 
-            if (Month.Text == "June")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 30;
-            }
+                if (Month.Text == "May")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 31;
+                }
 
-            if (Month.Text == "July")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
+                if (Month.Text == "June")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 30;
+                }
 
-            if (Month.Text == "August")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
+                if (Month.Text == "July")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 31;
+                }
 
-            if (Month.Text == "September")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 30;
-            }
+                if (Month.Text == "August")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 31;
+                }
 
-            if (Month.Text == "October")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
+                if (Month.Text == "September")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 30;
+                }
 
-            if (Month.Text == "November")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 30;
-            }
+                if (Month.Text == "October")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 31;
+                }
 
-            if (Month.Text == "December")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
+                if (Month.Text == "November")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 30;
+                }
+
+                if (Month.Text == "December")
+                {
+                    Day.Minimum = 1;
+                    Day.Maximum = 31;
+                }
+            
+            
         }
 
 
@@ -248,6 +254,8 @@ namespace contact_tracing
                 runnynose.Enabled = true;
                 lossofsmellortaste.Enabled = true;
                 Othersymptext.Enabled = true;
+                ifyes.ForeColor = Color.Black;
+                otherslabel.ForeColor = Color.Black;
 
             }
             else
@@ -266,7 +274,8 @@ namespace contact_tracing
                 shortnessofbreath.Checked = false;
                 runnynose.Checked = false;
                 lossofsmellortaste.Checked = false;
-                Othersymptext.Enabled = false;
+                ifyes.ForeColor = Color.Gray;
+                otherslabel.ForeColor = Color.Gray;
             }
         }
 
@@ -311,11 +320,11 @@ namespace contact_tracing
         {
             if (Othersbutton.Checked == true)
             {
-                OtherTextBox.ReadOnly = false;
+                OtherTextBox.Enabled = true;
             }
             else
             {
-                OtherTextBox.ReadOnly = true;
+                OtherTextBox.Enabled = false;
                 OtherTextBox.Text = " ";
             }
         }
@@ -350,8 +359,13 @@ namespace contact_tracing
 
         private void InfoButton_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
+            secondpage form = new secondpage();
             form.Show();
         }
+
+        private void Info_Click(object sender, EventArgs e)
+        {
+            
+    }
     }
 }

@@ -3,10 +3,10 @@ C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\contact-traci
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\contact-tracing.pdb
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.AssemblyReference.cache
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.SuggestedBindingRedirects.cache
-C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form1.resources
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Properties.Resources.resources
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.GenerateResource.cache
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CoreCompileInputs.cache
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.exe
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.pdb
-C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form2.resources
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Firstpage.resources
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.secondpage.resources
