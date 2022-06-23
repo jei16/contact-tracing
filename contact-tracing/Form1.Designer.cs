@@ -81,6 +81,7 @@
             this.Othersymptext = new System.Windows.Forms.TextBox();
             this.labelothers = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.InfoButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -673,12 +674,23 @@
             this.panel7.TabIndex = 62;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
+            // InfoButton
+            // 
+            this.InfoButton.BackColor = System.Drawing.SystemColors.Info;
+            this.InfoButton.Location = new System.Drawing.Point(15, 655);
+            this.InfoButton.Name = "InfoButton";
+            this.InfoButton.Size = new System.Drawing.Size(75, 23);
+            this.InfoButton.TabIndex = 63;
+            this.InfoButton.UseVisualStyleBackColor = false;
+            this.InfoButton.Click += new System.EventHandler(this.InfoButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(532, 690);
+            this.Controls.Add(this.InfoButton);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.labelothers);
             this.Controls.Add(this.Othersymptext);
@@ -721,6 +733,7 @@
             this.Controls.Add(this.panel6);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Contact Tracing Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -793,6 +806,7 @@
         private System.Windows.Forms.TextBox Othersymptext;
         private System.Windows.Forms.Label labelothers;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button InfoButton;
     }
 }
 

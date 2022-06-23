@@ -9,3 +9,4 @@ C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-traci
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CoreCompileInputs.cache
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.exe
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.pdb
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form2.resources

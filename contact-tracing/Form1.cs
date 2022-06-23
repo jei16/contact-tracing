@@ -25,11 +25,12 @@ namespace contact_tracing
         string runnynosee;
         string losssmelltaste;
         string othersymp;
-        
 
+        Form1 instance;
         public Form1()
         {
             InitializeComponent();
+            instance = this;
         }
 
 
@@ -67,8 +68,8 @@ namespace contact_tracing
                 Day.Minimum = 1;
                 Day.Maximum = 29;
             }
-
-
+           
+         
 
             if (Month.Text == "March")
             {
@@ -135,9 +136,7 @@ namespace contact_tracing
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             StreamWriter file = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\Contact Tracing.txt");
-            file.WriteLine("First Name:" + " " + FirstName.Text);
-            file.WriteLine("Middle Name:" + " " + MiddleName.Text);
-            file.WriteLine("Last Name:" + " " + LastName.Text);
+            file.WriteLine("Name:" + " " + LastName.Text + "," + " " + FirstName.Text + " " + MiddleName.Text);
             file.WriteLine( " " );
             file.WriteLine("Age:" + " " + Age.Text);
             file.WriteLine(" ");
@@ -316,13 +315,19 @@ namespace contact_tracing
 
         private void Year_ValueChanged(object sender, EventArgs e)
         {
-           
+            
 
         }
 
         private void Day_ValueChanged(object sender, EventArgs e)
         {
          
+        }
+
+        private void InfoButton_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            form.Show();
         }
     }
 }
