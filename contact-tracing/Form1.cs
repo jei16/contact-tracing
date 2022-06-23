@@ -135,44 +135,68 @@ namespace contact_tracing
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            StreamWriter file = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\Contact Tracing.txt");
-            file.WriteLine("Name:" + " " + LastName.Text + "," + " " + FirstName.Text + " " + MiddleName.Text);
-            file.WriteLine( " " );
-            file.WriteLine("Age:" + " " + Age.Text);
-            file.WriteLine(" ");
-            file.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
-            file.WriteLine(" ");
-            file.WriteLine("Gender:" + " " + gender);
-            file.WriteLine(" ");
-            file.WriteLine("Address:" + " " + Address.Text);
-            file.WriteLine(" ");
-            file.WriteLine("Contact number:" + " " + ContactNumber.Text);
-            file.WriteLine(" ");
-            file.WriteLine("Email:" + " " + Email.Text);
-            file.WriteLine(" ");
-            file.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
-            file.WriteLine(" ");
-            file.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
-            file.WriteLine(" ");
-            file.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
-            file.WriteLine(" ");
+            StreamWriter outputfile = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\Contact Tracing.txt");
+            outputfile.WriteLine("Name:" + " " + LastName.Text + "," + " " + FirstName.Text + " " + MiddleName.Text);
+            outputfile.WriteLine( " " );
+            outputfile.WriteLine("Age:" + " " + Age.Text);
+            outputfile.WriteLine(" ");
+            outputfile.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
+            outputfile.WriteLine(" ");
+            outputfile.WriteLine("Gender:" + " " + gender);
+            outputfile.WriteLine(" ");
+            outputfile.WriteLine("Address:" + " " + Address.Text);
+            outputfile.WriteLine(" ");
+            outputfile.WriteLine("Contact number:" + " " + ContactNumber.Text);
+            outputfile.WriteLine(" ");
+            outputfile.WriteLine("Email:" + " " + Email.Text);
+            outputfile.WriteLine(" ");
+            outputfile.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
+            outputfile.WriteLine(" ");
+            outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
+            outputfile.WriteLine(" ");
+            outputfile.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
+            outputfile.WriteLine(" ");
 
             if (NoSymptoms.Checked == false)
             {
-                file.WriteLine("Symptoms list:" + " " + coughh + " / " + feverr + " / " + sorethroatt + " / " + shortbreath + " / " + runnynosee + " / " + losssmelltaste + " / " + othersymp);
+                outputfile.WriteLine("Symptoms list:" + " " + coughh + " / " + feverr + " / " + sorethroatt + " / " + shortbreath + " / " + runnynosee + " / " + losssmelltaste + " / " + othersymp);
             }
             else
             {
-                file.WriteLine("") ;
+                outputfile.WriteLine("") ;
             }
 
-            file.WriteLine(" ");
-            file.WriteLine(" ------------------------------------------- ");
-            file.WriteLine(" ");
+            outputfile.WriteLine(" ");
+            outputfile.WriteLine(" ------------------------------------------- ");
+            outputfile.WriteLine(" ");
 
-            file.Close();
+            outputfile.Close();
 
-            MessageBox.Show("Submitted!");
+            if (MessageBox.Show("Submitted!") == DialogResult.OK)
+            {
+                FirstName.Text = "";
+                MiddleName.Text = "";
+                LastName.Text = "";
+                Age.Text = "";
+                Month.Text = "January";
+                Day.Value = 1;
+                Year.Value = 2000;
+                MaleButton.Checked = false;
+                FemaleButton.Checked = false;
+                Othersbutton.Checked = false;
+                Address.Text= "";
+                ContactNumber.Text = "";
+                Email.Text = "";
+                NoVac.Checked = false;
+                firstdosevac.Checked = false;
+                fullyvac.Checked = false;
+                NoBooster.Checked = false;
+                HasBooster.Checked = false;
+                NoSymptoms.Checked = false;
+                HasSymptoms.Checked = false;
+
+
+            }
         }
 
         private void FemaleButton_CheckedChanged(object sender, EventArgs e)

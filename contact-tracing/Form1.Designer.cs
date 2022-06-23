@@ -486,7 +486,7 @@
             this.Year.Size = new System.Drawing.Size(120, 20);
             this.Year.TabIndex = 47;
             this.Year.Value = new decimal(new int[] {
-            1980,
+            2000,
             0,
             0,
             0});
@@ -677,7 +677,7 @@
             // InfoButton
             // 
             this.InfoButton.BackColor = System.Drawing.SystemColors.Info;
-            this.InfoButton.Location = new System.Drawing.Point(15, 655);
+            this.InfoButton.Location = new System.Drawing.Point(31, 655);
             this.InfoButton.Name = "InfoButton";
             this.InfoButton.Size = new System.Drawing.Size(75, 23);
             this.InfoButton.TabIndex = 63;
