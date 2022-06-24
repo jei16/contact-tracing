@@ -99,7 +99,7 @@
             // 
             this.Fnlabel.AutoSize = true;
             this.Fnlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fnlabel.Location = new System.Drawing.Point(12, 44);
+            this.Fnlabel.Location = new System.Drawing.Point(12, 61);
             this.Fnlabel.Name = "Fnlabel";
             this.Fnlabel.Size = new System.Drawing.Size(67, 13);
             this.Fnlabel.TabIndex = 0;
@@ -109,7 +109,7 @@
             // 
             this.lnlabel.AutoSize = true;
             this.lnlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnlabel.Location = new System.Drawing.Point(354, 44);
+            this.lnlabel.Location = new System.Drawing.Point(354, 61);
             this.lnlabel.Name = "lnlabel";
             this.lnlabel.Size = new System.Drawing.Size(67, 13);
             this.lnlabel.TabIndex = 1;
@@ -120,7 +120,7 @@
             // 
             this.agelabel.AutoSize = true;
             this.agelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agelabel.Location = new System.Drawing.Point(12, 110);
+            this.agelabel.Location = new System.Drawing.Point(12, 127);
             this.agelabel.Name = "agelabel";
             this.agelabel.Size = new System.Drawing.Size(29, 13);
             this.agelabel.TabIndex = 4;
@@ -129,7 +129,7 @@
             // Age
             // 
             this.Age.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.Age.Location = new System.Drawing.Point(15, 135);
+            this.Age.Location = new System.Drawing.Point(15, 152);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(57, 30);
             this.Age.TabIndex = 5;
@@ -200,7 +200,7 @@
             // LastName
             // 
             this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.LastName.Location = new System.Drawing.Point(357, 60);
+            this.LastName.Location = new System.Drawing.Point(357, 77);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(156, 30);
             this.LastName.TabIndex = 17;
@@ -209,7 +209,7 @@
             // 
             this.mnlabel.AutoSize = true;
             this.mnlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnlabel.Location = new System.Drawing.Point(183, 44);
+            this.mnlabel.Location = new System.Drawing.Point(183, 61);
             this.mnlabel.Name = "mnlabel";
             this.mnlabel.Size = new System.Drawing.Size(80, 13);
             this.mnlabel.TabIndex = 18;
@@ -218,7 +218,7 @@
             // MiddleName
             // 
             this.MiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.MiddleName.Location = new System.Drawing.Point(183, 60);
+            this.MiddleName.Location = new System.Drawing.Point(183, 77);
             this.MiddleName.Name = "MiddleName";
             this.MiddleName.Size = new System.Drawing.Size(156, 30);
             this.MiddleName.TabIndex = 19;
@@ -345,7 +345,7 @@
             // FirstName
             // 
             this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.FirstName.Location = new System.Drawing.Point(15, 60);
+            this.FirstName.Location = new System.Drawing.Point(15, 77);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(156, 30);
             this.FirstName.TabIndex = 51;
@@ -369,7 +369,7 @@
             this.panel1.Controls.Add(this.MaleButton);
             this.panel1.Controls.Add(this.genderlabel);
             this.panel1.Controls.Add(this.OtherTextBox);
-            this.panel1.Location = new System.Drawing.Point(274, 96);
+            this.panel1.Location = new System.Drawing.Point(274, 113);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(239, 147);
             this.panel1.TabIndex = 53;
@@ -424,7 +424,7 @@
             // 
             this.bdaylabel.AutoSize = true;
             this.bdaylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bdaylabel.Location = new System.Drawing.Point(111, 110);
+            this.bdaylabel.Location = new System.Drawing.Point(111, 127);
             this.bdaylabel.Name = "bdaylabel";
             this.bdaylabel.Size = new System.Drawing.Size(53, 13);
             this.bdaylabel.TabIndex = 11;
@@ -447,7 +447,7 @@
             this.Month.Items.Add("October");
             this.Month.Items.Add("November");
             this.Month.Items.Add("December");
-            this.Month.Location = new System.Drawing.Point(136, 135);
+            this.Month.Location = new System.Drawing.Point(136, 152);
             this.Month.Name = "Month";
             this.Month.ReadOnly = true;
             this.Month.Size = new System.Drawing.Size(120, 20);
@@ -458,7 +458,7 @@
             // Day
             // 
             this.Day.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Day.Location = new System.Drawing.Point(136, 161);
+            this.Day.Location = new System.Drawing.Point(136, 178);
             this.Day.Maximum = new decimal(new int[] {
             31,
             0,
@@ -481,7 +481,7 @@
             // 
             // Year
             // 
-            this.Year.Location = new System.Drawing.Point(136, 187);
+            this.Year.Location = new System.Drawing.Point(136, 204);
             this.Year.Maximum = new decimal(new int[] {
             2022,
             0,
@@ -507,7 +507,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(114, 138);
+            this.label10.Location = new System.Drawing.Point(114, 155);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 13);
             this.label10.TabIndex = 48;
@@ -518,7 +518,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(114, 163);
+            this.label11.Location = new System.Drawing.Point(114, 180);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 13);
             this.label11.TabIndex = 49;
@@ -529,7 +529,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(114, 189);
+            this.label12.Location = new System.Drawing.Point(114, 206);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(14, 13);
             this.label12.TabIndex = 50;
@@ -537,7 +537,7 @@
             // 
             // panel6
             // 
-            this.panel6.Location = new System.Drawing.Point(100, 100);
+            this.panel6.Location = new System.Drawing.Point(100, 117);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(168, 121);
             this.panel6.TabIndex = 59;
@@ -718,7 +718,7 @@
             this.date2day.Name = "date2day";
             this.date2day.Size = new System.Drawing.Size(100, 20);
             this.date2day.TabIndex = 65;
-            this.date2day.Text = "June 23, 2022";
+            this.date2day.Text = "06/23/2022";
             this.date2day.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Info

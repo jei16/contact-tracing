@@ -85,6 +85,7 @@ namespace contact_tracing
                 Firstpage.instance.receivedlabel.Enabled = false;
                 Firstpage.instance.boosterlabel.Enabled = false;
                 Firstpage.instance.symplabel.Enabled = false;
+                
 
 
 

@@ -26,9 +26,11 @@ namespace contact_tracing
         string runnynosee;
         string losssmelltaste;
         string othersymp;
-
+        
 
         public static Firstpage instance;
+
+       
         public Firstpage()
         {
             InitializeComponent();
@@ -142,7 +144,9 @@ namespace contact_tracing
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            StreamWriter outputfile = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\Contact Tracing.txt");
+            StreamWriter outputfile = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\ContactTracing.txt");
+            outputfile.WriteLine("Date today:" + " " + date2day.Text);
+            outputfile.WriteLine("");
             outputfile.WriteLine("Name:" + " " + LastName.Text + "," + " " + FirstName.Text + " " + MiddleName.Text);
             outputfile.WriteLine(" ");
             outputfile.WriteLine("Age:" + " " + Age.Text);
@@ -175,7 +179,15 @@ namespace contact_tracing
 
             if (NoSymptoms.Checked == false)
             {
-                outputfile.WriteLine("Symptoms list:" + " " + coughh + " / " + feverr + " / " + sorethroatt + " / " + shortbreath + " / " + runnynosee + " / " + losssmelltaste + " / " + othersymp);
+                // +" " + coughh + " / " + feverr + " / " + sorethroatt + " / " + shortbreath + " / " + runnynosee + " / " + losssmelltaste + " / " + othersymp);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Symptoms list:");
+                outputfile.WriteLine(coughh);
+                outputfile.WriteLine(sorethroatt);
+                outputfile.WriteLine(shortbreath);
+                outputfile.WriteLine(runnynosee);
+                outputfile.WriteLine(losssmelltaste);
+                outputfile.WriteLine(othersymp);
             }
             else
             {
@@ -393,11 +405,7 @@ namespace contact_tracing
 
             thirdpage form = new thirdpage();
             form.Show();
-
-            if (MessageBox.Show("Confirm?") == DialogResult.OK)
-            {
-                this.Close();
-            }
+            this.Hide();
 
         }
 
@@ -441,9 +449,9 @@ namespace contact_tracing
             fullyvac.Checked = false;
             fullyvac.Enabled = true;
             NoBooster.Checked = false;
-            NoBooster.Enabled = true;
+            NoBooster.Enabled = false;
             HasBooster.Checked = false;
-            HasBooster.Enabled = true;
+            HasBooster.Enabled = false;
             NoSymptoms.Checked = false;
             NoSymptoms.Enabled = true;
             HasSymptoms.Checked = false;

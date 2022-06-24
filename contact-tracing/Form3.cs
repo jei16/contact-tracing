@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace contact_tracing
 {
@@ -24,6 +25,31 @@ namespace contact_tracing
 
         }
 
-        
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Firstpage.instance.Show();
+            this.Close();
+        }
+
+        private void showinfo_Click(object sender, EventArgs e)
+        {
+            StreamReader reader;
+            reader = File.OpenText(@"C:\Users\Jc\Desktop\contact tracing\ContactTracing.txt");
+            {
+
+                while (!reader.EndOfStream)
+                {
+                    Infoss.Items.Add(reader.ReadLine());
+                }
+            }
+           reader.Close(); 
+
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
