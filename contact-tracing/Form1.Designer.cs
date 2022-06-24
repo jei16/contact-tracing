@@ -309,6 +309,7 @@
             // 
             this.boosterlabel.AutoSize = true;
             this.boosterlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boosterlabel.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.boosterlabel.Location = new System.Drawing.Point(9, 12);
             this.boosterlabel.Name = "boosterlabel";
             this.boosterlabel.Size = new System.Drawing.Size(87, 13);
@@ -318,6 +319,7 @@
             // NoBooster
             // 
             this.NoBooster.AutoSize = true;
+            this.NoBooster.Enabled = false;
             this.NoBooster.Location = new System.Drawing.Point(12, 32);
             this.NoBooster.Name = "NoBooster";
             this.NoBooster.Size = new System.Drawing.Size(39, 17);
@@ -330,6 +332,7 @@
             // HasBooster
             // 
             this.HasBooster.AutoSize = true;
+            this.HasBooster.Enabled = false;
             this.HasBooster.Location = new System.Drawing.Point(12, 55);
             this.HasBooster.Name = "HasBooster";
             this.HasBooster.Size = new System.Drawing.Size(43, 17);
@@ -720,7 +723,8 @@
             // 
             // Info
             // 
-            this.Info.BackColor = System.Drawing.SystemColors.Info;
+            this.Info.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Info.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Info.Location = new System.Drawing.Point(160, 680);
             this.Info.Name = "Info";
             this.Info.Size = new System.Drawing.Size(75, 33);
@@ -732,14 +736,16 @@
             // 
             // logout
             // 
-            this.logout.BackColor = System.Drawing.SystemColors.Info;
+            this.logout.BackColor = System.Drawing.SystemColors.Desktop;
+            this.logout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.logout.Location = new System.Drawing.Point(260, 685);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(75, 23);
             this.logout.TabIndex = 67;
-            this.logout.Text = "log out";
+            this.logout.Text = "Log out";
             this.logout.UseVisualStyleBackColor = false;
             this.logout.Visible = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // Firstpage
             // 

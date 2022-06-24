@@ -12,6 +12,7 @@ using System.IO;
 
 namespace contact_tracing
 {
+    
     public partial class Firstpage : Form
     {
         string gender;
@@ -25,7 +26,7 @@ namespace contact_tracing
         string runnynosee;
         string losssmelltaste;
         string othersymp;
-        
+
 
         public static Firstpage instance;
         public Firstpage()
@@ -45,7 +46,7 @@ namespace contact_tracing
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -60,82 +61,82 @@ namespace contact_tracing
 
         private void Month_SelectedItemChanged(object sender, EventArgs e)
         {
-            
-                if (Month.Text == "January")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 31;
-                }
 
-           
-                if (Month.Text == "February")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 29;
-                }
+            if (Month.Text == "January")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
 
 
-                if (Month.Text == "March")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 31;
-                }
+            if (Month.Text == "February")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 29;
+            }
 
-                if (Month.Text == "April")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 30;
-                }
 
-                if (Month.Text == "May")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 31;
-                }
+            if (Month.Text == "March")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
 
-                if (Month.Text == "June")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 30;
-                }
+            if (Month.Text == "April")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 30;
+            }
 
-                if (Month.Text == "July")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 31;
-                }
+            if (Month.Text == "May")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
 
-                if (Month.Text == "August")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 31;
-                }
+            if (Month.Text == "June")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 30;
+            }
 
-                if (Month.Text == "September")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 30;
-                }
+            if (Month.Text == "July")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
 
-                if (Month.Text == "October")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 31;
-                }
+            if (Month.Text == "August")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
 
-                if (Month.Text == "November")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 30;
-                }
+            if (Month.Text == "September")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 30;
+            }
 
-                if (Month.Text == "December")
-                {
-                    Day.Minimum = 1;
-                    Day.Maximum = 31;
-                }
-            
-            
+            if (Month.Text == "October")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
+
+            if (Month.Text == "November")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 30;
+            }
+
+            if (Month.Text == "December")
+            {
+                Day.Minimum = 1;
+                Day.Maximum = 31;
+            }
+
+
         }
 
 
@@ -143,7 +144,7 @@ namespace contact_tracing
         {
             StreamWriter outputfile = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\Contact Tracing.txt");
             outputfile.WriteLine("Name:" + " " + LastName.Text + "," + " " + FirstName.Text + " " + MiddleName.Text);
-            outputfile.WriteLine( " " );
+            outputfile.WriteLine(" ");
             outputfile.WriteLine("Age:" + " " + Age.Text);
             outputfile.WriteLine(" ");
             outputfile.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
@@ -158,7 +159,16 @@ namespace contact_tracing
             outputfile.WriteLine(" ");
             outputfile.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
             outputfile.WriteLine(" ");
-            outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
+
+            if (fullyvac.Checked == true)
+            {
+                outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
+            }
+            else
+            {
+                outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + "No");
+            }
+
             outputfile.WriteLine(" ");
             outputfile.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
             outputfile.WriteLine(" ");
@@ -169,7 +179,7 @@ namespace contact_tracing
             }
             else
             {
-                outputfile.WriteLine("") ;
+                outputfile.WriteLine("");
             }
 
             outputfile.WriteLine(" ");
@@ -190,7 +200,7 @@ namespace contact_tracing
                 MaleButton.Checked = false;
                 FemaleButton.Checked = false;
                 Othersbutton.Checked = false;
-                Address.Text= "";
+                Address.Text = "";
                 ContactNumber.Text = "";
                 Email.Text = "";
                 NoVac.Checked = false;
@@ -224,6 +234,21 @@ namespace contact_tracing
         private void fullyvac_CheckedChanged(object sender, EventArgs e)
         {
             vaccinated = "Yes, Fully Vaccinated (1st and 2nd Dose)";
+
+            if (fullyvac.Checked == true)
+            {
+                NoBooster.Enabled = true;
+                HasBooster.Enabled = true;
+                boosterlabel.ForeColor = Color.Black;
+            }
+            else
+            {
+                NoBooster.Enabled = false;
+                HasBooster.Enabled = false;
+                boosterlabel.ForeColor = Color.Gray;
+                NoBooster.Checked = false;
+                HasBooster.Checked = false;
+            }
         }
 
         private void NoBooster_CheckedChanged(object sender, EventArgs e)
@@ -283,7 +308,7 @@ namespace contact_tracing
         {
             coughh = "Cough";
         }
-        
+
         private void fever_CheckedChanged(object sender, EventArgs e)
         {
             feverr = "Fever";
@@ -308,7 +333,7 @@ namespace contact_tracing
         {
             losssmelltaste = "Loss of smell or taste";
         }
-      
+
 
         private void OtherTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -348,13 +373,13 @@ namespace contact_tracing
 
         private void Year_ValueChanged(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void Day_ValueChanged(object sender, EventArgs e)
         {
-         
+
         }
 
         private void InfoButton_Click(object sender, EventArgs e)
@@ -365,7 +390,77 @@ namespace contact_tracing
 
         private void Info_Click(object sender, EventArgs e)
         {
-            
-    }
+
+            thirdpage form = new thirdpage();
+            form.Show();
+
+            if (MessageBox.Show("Confirm?") == DialogResult.OK)
+            {
+                this.Close();
+            }
+
+        }
+
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            Info.Visible = false;
+            logout.Visible = false;
+            date2day.Enabled = false;
+            AdminButton.Visible = true;
+            FirstName.Text = "";
+            FirstName.Enabled = true;
+            MiddleName.Text = "";
+            MiddleName.Enabled = true;
+            LastName.Text = "";
+            LastName.Enabled = true;
+            Age.Text = "";
+            Age.Enabled = true;
+            Month.Text = "January";
+            Month.Enabled = true;
+            Day.Value = 1;
+            Day.Enabled = true;
+            Year.Value = 2000;
+            Year.Enabled = true;
+            MaleButton.Checked = false;
+            MaleButton.Enabled = true;
+            FemaleButton.Checked = false;
+            FemaleButton.Enabled = true;
+            Othersbutton.Checked = false;
+            Othersbutton.Enabled = true;
+            Address.Text = "";
+            Address.Enabled = true;
+            ContactNumber.Text = "";
+            ContactNumber.Enabled = true;
+            Email.Text = "";
+            Email.Enabled = true;
+            NoVac.Checked = false;
+            NoVac.Enabled = true;
+            firstdosevac.Checked = false;
+            firstdosevac.Enabled = true;
+            fullyvac.Checked = false;
+            fullyvac.Enabled = true;
+            NoBooster.Checked = false;
+            NoBooster.Enabled = true;
+            HasBooster.Checked = false;
+            HasBooster.Enabled = true;
+            NoSymptoms.Checked = false;
+            NoSymptoms.Enabled = true;
+            HasSymptoms.Checked = false;
+            HasSymptoms.Enabled = true;
+            SubmitButton.Enabled = true;
+            Fnlabel.Enabled = true;
+            mnlabel.Enabled = true;
+            lnlabel.Enabled = true;
+            agelabel.Enabled = true;
+            bdaylabel.Enabled = true;
+            genderlabel.Enabled = true;
+            addresslabel.Enabled = true;
+            emaillabel.Enabled = true;
+            contactlabel.Enabled = true;
+            receivedlabel.Enabled = true;
+            boosterlabel.Enabled = true;
+            symplabel.Enabled = true;
+        }
     }
 }

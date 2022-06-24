@@ -49,7 +49,7 @@
             this.magicword.Location = new System.Drawing.Point(58, 62);
             this.magicword.Name = "magicword";
             this.magicword.Size = new System.Drawing.Size(206, 26);
-            this.magicword.TabIndex = 1;
+            this.magicword.TabIndex = 2;
             this.magicword.UseSystemPasswordChar = true;
             // 
             // submitadmin
@@ -57,7 +57,7 @@
             this.submitadmin.Location = new System.Drawing.Point(123, 110);
             this.submitadmin.Name = "submitadmin";
             this.submitadmin.Size = new System.Drawing.Size(75, 23);
-            this.submitadmin.TabIndex = 2;
+            this.submitadmin.TabIndex = 1;
             this.submitadmin.Text = "Enter";
             this.submitadmin.UseVisualStyleBackColor = true;
             this.submitadmin.Click += new System.EventHandler(this.submitadmin_Click);

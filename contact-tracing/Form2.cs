@@ -90,13 +90,13 @@ namespace contact_tracing
 
                 if (MessageBox.Show("Correct!") == DialogResult.OK)
                 {
-                    
+                   this.Close();
                 }
 
             }
             else
             {
-                MessageBox.Show("Wrong Password");
+                MessageBox.Show("Incorrect!");
             }
         }
     }

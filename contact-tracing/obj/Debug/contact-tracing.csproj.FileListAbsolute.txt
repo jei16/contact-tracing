@@ -10,3 +10,4 @@ C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-traci
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.pdb
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Firstpage.resources
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.secondpage.resources
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.thirdpage.resources
