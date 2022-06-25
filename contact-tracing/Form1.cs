@@ -40,6 +40,7 @@ namespace contact_tracing
 
 
 
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -48,7 +49,7 @@ namespace contact_tracing
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -141,65 +142,124 @@ namespace contact_tracing
 
         }
 
-
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            StreamWriter outputfile = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\ContactTracing.txt");
-            outputfile.WriteLine("Date today:" + " " + date2day.Text);
-            outputfile.WriteLine("");
-            outputfile.WriteLine("Name:" + " " + LastName.Text + "," + " " + FirstName.Text + " " + MiddleName.Text);
-            outputfile.WriteLine(" ");
-            outputfile.WriteLine("Age:" + " " + Age.Text);
-            outputfile.WriteLine(" ");
-            outputfile.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
-            outputfile.WriteLine(" ");
-            outputfile.WriteLine("Gender:" + " " + gender);
-            outputfile.WriteLine(" ");
-            outputfile.WriteLine("Address:" + " " + Address.Text);
-            outputfile.WriteLine(" ");
-            outputfile.WriteLine("Contact number:" + " " + ContactNumber.Text);
-            outputfile.WriteLine(" ");
-            outputfile.WriteLine("Email:" + " " + Email.Text);
-            outputfile.WriteLine(" ");
-            outputfile.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
-            outputfile.WriteLine(" ");
-
-            if (fullyvac.Checked == true)
             {
-                outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
-            }
-            else
-            {
-                outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + "No");
-            }
-
-            outputfile.WriteLine(" ");
-            outputfile.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
-            outputfile.WriteLine(" ");
-
-            if (NoSymptoms.Checked == false)
-            {
-                // +" " + coughh + " / " + feverr + " / " + sorethroatt + " / " + shortbreath + " / " + runnynosee + " / " + losssmelltaste + " / " + othersymp);
-                outputfile.WriteLine(" ");
-                outputfile.WriteLine("Symptoms list:");
-                outputfile.WriteLine(coughh);
-                outputfile.WriteLine(sorethroatt);
-                outputfile.WriteLine(shortbreath);
-                outputfile.WriteLine(runnynosee);
-                outputfile.WriteLine(losssmelltaste);
-                outputfile.WriteLine(othersymp);
-            }
-            else
-            {
+                StreamWriter outputfile = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\date2day\" + Month2day.Text + " " + Day2day.Text + " " + Year2day.Text + ".txt" );
+                outputfile.WriteLine("Date today:" + " " + Month2day.Text + " " + Day2day.Text + " " + Year2day.Text);
                 outputfile.WriteLine("");
+                outputfile.WriteLine("Name:" + " " + LastName.Text + "," + " " + FirstName.Text + " " + MiddleName.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Age:" + " " + Age.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Gender:" + " " + gender);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Address:" + " " + Address.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Contact number:" + " " + ContactNumber.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Email:" + " " + Email.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
+                outputfile.WriteLine(" ");
+
+                if (fullyvac.Checked == true)
+                {
+                    outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
+                }
+                else
+                {
+                    outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + "No");
+                }
+
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
+                outputfile.WriteLine(" ");
+
+                if (NoSymptoms.Checked == false)
+                {
+
+                    outputfile.WriteLine(" ");
+                    outputfile.WriteLine("Symptoms list:");
+                    outputfile.WriteLine(coughh);
+                    outputfile.WriteLine(sorethroatt);
+                    outputfile.WriteLine(shortbreath);
+                    outputfile.WriteLine(runnynosee);
+                    outputfile.WriteLine(losssmelltaste);
+                    outputfile.WriteLine(othersymp);
+                }
+                else
+                {
+                    outputfile.WriteLine("");
+                }
+
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine(" ------------------------------------------- ");
+                outputfile.WriteLine(" ");
+
+                outputfile.Close();
             }
+            
+            {
+                StreamWriter outputfile = File.AppendText(@"C:\Users\Jc\Desktop\contact tracing\name\" + LastName.Text + "," + " " + FirstName.Text + " " + MiddleName.Text + ".txt");
+                outputfile.WriteLine("Date today:" + " " + Month2day.Text + " " + Day2day.Text + " " + Year2day.Text);
+                outputfile.WriteLine("");
+                outputfile.WriteLine("Name:" + " " + LastName.Text + "," + " " + FirstName.Text + " " + MiddleName.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Age:" + " " + Age.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Gender:" + " " + gender);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Address:" + " " + Address.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Contact number:" + " " + ContactNumber.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Email:" + " " + Email.Text);
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
+                outputfile.WriteLine(" ");
 
-            outputfile.WriteLine(" ");
-            outputfile.WriteLine(" ------------------------------------------- ");
-            outputfile.WriteLine(" ");
+                if (fullyvac.Checked == true)
+                {
+                    outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
+                }
+                else
+                {
+                    outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + "No");
+                }
 
-            outputfile.Close();
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
+                outputfile.WriteLine(" ");
 
+                if (NoSymptoms.Checked == false)
+                {
+
+                    outputfile.WriteLine(" ");
+                    outputfile.WriteLine("Symptoms list:");
+                    outputfile.WriteLine(coughh);
+                    outputfile.WriteLine(sorethroatt);
+                    outputfile.WriteLine(shortbreath);
+                    outputfile.WriteLine(runnynosee);
+                    outputfile.WriteLine(losssmelltaste);
+                    outputfile.WriteLine(othersymp);
+                }
+                else
+                {
+                    outputfile.WriteLine("");
+                }
+
+                outputfile.WriteLine(" ");
+                outputfile.WriteLine(" ------------------------------------------- ");
+                outputfile.WriteLine(" ");
+
+                outputfile.Close();
+            }
+            
             if (MessageBox.Show("Submitted!") == DialogResult.OK)
             {
                 FirstName.Text = "";
@@ -225,7 +285,13 @@ namespace contact_tracing
 
 
             }
+
         }
+
+            
+
+
+            
 
         private void FemaleButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -328,7 +394,7 @@ namespace contact_tracing
 
         private void sorethroat_CheckedChanged(object sender, EventArgs e)
         {
-            sorethroatt = "Sore throat";
+                sorethroatt = "Sore throat";
         }
 
         private void shortnessofbreath_CheckedChanged(object sender, EventArgs e)
@@ -414,7 +480,9 @@ namespace contact_tracing
         {
             Info.Visible = false;
             logout.Visible = false;
-            date2day.Enabled = false;
+            Month2day.Enabled = false;
+            Day2day.Enabled = false;
+            Year2day.Enabled = false;
             AdminButton.Visible = true;
             FirstName.Text = "";
             FirstName.Enabled = true;
@@ -469,6 +537,19 @@ namespace contact_tracing
             receivedlabel.Enabled = true;
             boosterlabel.Enabled = true;
             symplabel.Enabled = true;
+        }
+
+        
+        
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Date2day_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

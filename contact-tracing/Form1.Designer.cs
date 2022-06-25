@@ -83,9 +83,11 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.AdminButton = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.date2day = new System.Windows.Forms.TextBox();
             this.Info = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.Button();
+            this.Year2day = new System.Windows.Forms.NumericUpDown();
+            this.Day2day = new System.Windows.Forms.NumericUpDown();
+            this.Month2day = new System.Windows.Forms.DomainUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -93,6 +95,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Day)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Year)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Year2day)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Day2day)).BeginInit();
             this.SuspendLayout();
             // 
             // Fnlabel
@@ -709,18 +713,6 @@
             this.label16.TabIndex = 64;
             this.label16.Text = "Date Today:";
             // 
-            // date2day
-            // 
-            this.date2day.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.date2day.Enabled = false;
-            this.date2day.HideSelection = false;
-            this.date2day.Location = new System.Drawing.Point(90, 10);
-            this.date2day.Name = "date2day";
-            this.date2day.Size = new System.Drawing.Size(100, 20);
-            this.date2day.TabIndex = 65;
-            this.date2day.Text = "06/23/2022";
-            this.date2day.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Info
             // 
             this.Info.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -747,15 +739,90 @@
             this.logout.Visible = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // Year2day
+            // 
+            this.Year2day.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Year2day.Enabled = false;
+            this.Year2day.Location = new System.Drawing.Point(222, 11);
+            this.Year2day.Maximum = new decimal(new int[] {
+            2022,
+            0,
+            0,
+            0});
+            this.Year2day.Minimum = new decimal(new int[] {
+            2020,
+            0,
+            0,
+            0});
+            this.Year2day.Name = "Year2day";
+            this.Year2day.Size = new System.Drawing.Size(51, 20);
+            this.Year2day.TabIndex = 77;
+            this.Year2day.Value = new decimal(new int[] {
+            2022,
+            0,
+            0,
+            0});
+            // 
+            // Day2day
+            // 
+            this.Day2day.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Day2day.Enabled = false;
+            this.Day2day.Location = new System.Drawing.Point(180, 11);
+            this.Day2day.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.Day2day.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Day2day.Name = "Day2day";
+            this.Day2day.Size = new System.Drawing.Size(35, 20);
+            this.Day2day.TabIndex = 76;
+            this.Day2day.Value = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            // 
+            // Month2day
+            // 
+            this.Month2day.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Month2day.Enabled = false;
+            this.Month2day.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Month2day.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Month2day.Items.Add("January");
+            this.Month2day.Items.Add("February");
+            this.Month2day.Items.Add("March");
+            this.Month2day.Items.Add("April");
+            this.Month2day.Items.Add("May");
+            this.Month2day.Items.Add("June");
+            this.Month2day.Items.Add("July");
+            this.Month2day.Items.Add("August");
+            this.Month2day.Items.Add("September");
+            this.Month2day.Items.Add("October");
+            this.Month2day.Items.Add("November");
+            this.Month2day.Items.Add("December");
+            this.Month2day.Location = new System.Drawing.Point(93, 11);
+            this.Month2day.Name = "Month2day";
+            this.Month2day.ReadOnly = true;
+            this.Month2day.Size = new System.Drawing.Size(82, 20);
+            this.Month2day.TabIndex = 75;
+            this.Month2day.Text = "June";
+            // 
             // Firstpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(527, 725);
+            this.Controls.Add(this.Year2day);
+            this.Controls.Add(this.Day2day);
+            this.Controls.Add(this.Month2day);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.Info);
-            this.Controls.Add(this.date2day);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.AdminButton);
             this.Controls.Add(this.panel7);
@@ -813,6 +880,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Year)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Year2day)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Day2day)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -842,7 +911,6 @@
         private System.Windows.Forms.Label label16;
         public System.Windows.Forms.Button Info;
         public System.Windows.Forms.Button logout;
-        public System.Windows.Forms.TextBox date2day;
         public System.Windows.Forms.Button AdminButton;
         public System.Windows.Forms.TextBox Age;
         public System.Windows.Forms.RadioButton MaleButton;
@@ -877,6 +945,10 @@
         public System.Windows.Forms.Label boosterlabel;
         public System.Windows.Forms.Label bdaylabel;
         public System.Windows.Forms.Label symplabel;
+        public System.Windows.Forms.NumericUpDown Year2day;
+        public System.Windows.Forms.NumericUpDown Day2day;
+        public System.Windows.Forms.DomainUpDown Month2day;
     }
 }
+    
 

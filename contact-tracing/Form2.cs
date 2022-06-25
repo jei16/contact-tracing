@@ -30,7 +30,9 @@ namespace contact_tracing
             {
                 Firstpage.instance.Info.Visible = true;
                 Firstpage.instance.logout.Visible = true;
-                Firstpage.instance.date2day.Enabled = true;
+                Firstpage.instance.Month2day.Enabled = true;
+                Firstpage.instance.Day2day.Enabled = true;
+                Firstpage.instance.Year2day.Enabled = true;
                 Firstpage.instance.AdminButton.Visible = false;
                 Firstpage.instance.FirstName.Text = "";
                 Firstpage.instance.FirstName.Enabled = false;
