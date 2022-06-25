@@ -34,8 +34,10 @@ namespace contact_tracing
         private void showinfo_Click(object sender, EventArgs e)
             
         {
+            try
+            {
                 StreamReader reader;
-                reader = File.OpenText(@"C:\Users\Jc\Desktop\contact tracing\date2day\" + Month2day.Text + " " + Day2day.Text + " " + Year2day.Text +".txt");
+                reader = File.OpenText(@"C:\Users\Jc\Desktop\contact tracing\date2day\" + Month2day.Text + " " + Day2day.Text + " " + Year2day.Text + ".txt");
                 {
 
                     while (!reader.EndOfStream)
@@ -48,30 +50,72 @@ namespace contact_tracing
                         Infoss23.Visible = false;
                     }
                 }
-               
+
                 reader.Close();
+            }
+            catch
+            {
+                StreamReader reader;
+                reader = File.OpenText(@"C:\Users\Jc\Desktop\contact tracing\date2day\None.txt");
+                {
+
+                    while (!reader.EndOfStream)
+                    {
+                        Infoss24.Items.Add(reader.ReadLine());
+                        Infoss24.Visible = true;
+                        showinfo2.Visible = false;
+                        showinfo1.Visible = true;
+                        Infoss23.Items.Clear();
+                        Infoss23.Visible = false;
+                    }
+                }
+
+                reader.Close();
+            }
         }
 
        
 
         private void showinfo1_Click(object sender, EventArgs e)
         {
-            StreamReader reader;
-            reader = File.OpenText(@"C:\Users\Jc\Desktop\contact tracing\date2day\" + Month2day.Text + " " + Day2day.Text + " " + Year2day.Text + ".txt");
+            try
             {
-
-                while (!reader.EndOfStream)
+                StreamReader reader;
+                reader = File.OpenText(@"C:\Users\Jc\Desktop\contact tracing\date2day\" + Month2day.Text + " " + Day2day.Text + " " + Year2day.Text + ".txt");
                 {
-                    Infoss23.Items.Add(reader.ReadLine());
-                    Infoss23.Visible = true;
-                    showinfo2.Visible = true;
-                    showinfo1.Visible = false;
-                    Infoss24.Items.Clear();
-                    Infoss24.Visible = false;
-                }
-            }
 
-            reader.Close();
+                    while (!reader.EndOfStream)
+                    {
+                        Infoss23.Items.Add(reader.ReadLine());
+                        Infoss23.Visible = true;
+                        showinfo2.Visible = true;
+                        showinfo1.Visible = false;
+                        Infoss24.Items.Clear();
+                        Infoss24.Visible = false;
+                    }
+                }
+
+                reader.Close();
+            }
+            catch
+            {
+                StreamReader reader;
+                reader = File.OpenText(@"C:\Users\Jc\Desktop\contact tracing\date2day\None.txt");
+                {
+
+                    while (!reader.EndOfStream)
+                    {
+                        Infoss23.Items.Add(reader.ReadLine());
+                        Infoss23.Visible = true;
+                        showinfo2.Visible = true;
+                        showinfo1.Visible = false;
+                        Infoss24.Items.Clear();
+                        Infoss24.Visible = false;
+                    }
+                }
+
+                reader.Close();
+            }
 
         }
 

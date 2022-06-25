@@ -169,10 +169,10 @@
             this.Controls.Add(this.Infoss23);
             this.Controls.Add(this.showinfo1);
             this.Controls.Add(this.Infoss24);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "fourthpage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form4";
+            this.Text = "Contact Information";
             this.Load += new System.EventHandler(this.fourthpage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
