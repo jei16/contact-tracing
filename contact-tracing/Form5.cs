@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QRCoder;
 
 namespace contact_tracing
 {
@@ -24,8 +25,9 @@ namespace contact_tracing
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

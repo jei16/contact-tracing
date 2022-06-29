@@ -13,3 +13,6 @@ C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_traci
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.thirdpage.resources
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.fourthpage.resources
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.QRGeneratepage.resources
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.QRCodeFillUp.resources
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\QRCoder.dll
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CopyComplete
