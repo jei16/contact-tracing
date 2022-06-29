@@ -136,7 +136,79 @@ namespace contact_tracing
 
         private void Month2day_SelectedItemChanged(object sender, EventArgs e)
         {
+            if (Month2day.Text == "January")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 31;
+            }
 
+
+            if (Month2day.Text == "February")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 29;
+            }
+
+
+            if (Month2day.Text == "March")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 31;
+            }
+
+            if (Month2day.Text == "April")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 30;
+            }
+
+            if (Month2day.Text == "May")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 31;
+            }
+
+            if (Month2day.Text == "June")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 30;
+            }
+
+            if (Month2day.Text == "July")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 31;
+            }
+
+            if (Month2day.Text == "August")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 31;
+            }
+
+            if (Month2day.Text == "September")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 30;
+            }
+
+            if (Month2day.Text == "October")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 31;
+            }
+
+            if (Month2day.Text == "November")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 30;
+            }
+
+            if (Month2day.Text == "December")
+            {
+                Day2day.Minimum = 1;
+                Day2day.Maximum = 31;
+            }
         }
 
         private void Day2day_ValueChanged(object sender, EventArgs e)

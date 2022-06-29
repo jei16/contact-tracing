@@ -769,7 +769,7 @@
             this.Day2day.Enabled = false;
             this.Day2day.Location = new System.Drawing.Point(180, 11);
             this.Day2day.Maximum = new decimal(new int[] {
-            31,
+            30,
             0,
             0,
             0});
@@ -811,6 +811,7 @@
             this.Month2day.Size = new System.Drawing.Size(82, 20);
             this.Month2day.TabIndex = 75;
             this.Month2day.Text = "June";
+            this.Month2day.SelectedItemChanged += new System.EventHandler(this.Month2day_SelectedItemChanged);
             // 
             // Firstpage
             // 

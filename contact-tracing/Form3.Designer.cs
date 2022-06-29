@@ -110,7 +110,7 @@
             this.Day2day.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Day2day.Location = new System.Drawing.Point(251, 13);
             this.Day2day.Maximum = new decimal(new int[] {
-            31,
+            30,
             0,
             0,
             0});

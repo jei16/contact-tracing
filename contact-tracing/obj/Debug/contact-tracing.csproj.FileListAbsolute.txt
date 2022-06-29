@@ -12,3 +12,4 @@ C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_traci
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.secondpage.resources
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.thirdpage.resources
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.fourthpage.resources
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.QRGeneratepage.resources
