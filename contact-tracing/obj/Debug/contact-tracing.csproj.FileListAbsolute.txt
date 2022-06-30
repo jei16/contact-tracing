@@ -16,3 +16,14 @@ C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_traci
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.QRCodeFillUp.resources
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\QRCoder.dll
 C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CopyComplete
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\AForge.dll
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\AForge.Video.dll
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\zxing.dll
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\zxing.presentation.dll
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\AForge.xml
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\AForge.Video.xml
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\zxing.xml
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\bin\Debug\zxing.presentation.xml
+C:\Users\Jc\source\repos\contact-tracing\contact-tracing\obj\Debug\contact_tracing.QRScannerpage.resources
