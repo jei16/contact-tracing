@@ -25,10 +25,6 @@ namespace contact_tracing
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void GenerateAgain_Click(object sender, EventArgs e)
         {
@@ -52,6 +48,13 @@ namespace contact_tracing
             QRCodeFillUp.instance.NoVac.Checked = false;
             QRCodeFillUp.instance.firstdosevac.Checked = false;
             QRCodeFillUp.instance.fullyvac.Checked = false;
+        }
+
+        private void Downloadbtn_Click(object sender, EventArgs e)
+        {
+            qrpic.Image.Save(@"C:\Users\Jc\Desktop\contact tracing\qrcodes\" + QRCodeFillUp.instance.LastName.Text + "," + " " + QRCodeFillUp.instance.FirstName.Text + " " + QRCodeFillUp.instance.MiddleName.Text + ".jpg");
+
+            MessageBox.Show("Downloaded!");
         }
     }
 }

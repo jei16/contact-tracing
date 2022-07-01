@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Downloadbtn = new System.Windows.Forms.Button();
             this.qrpic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.GenerateAgain = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.qrpic)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Downloadbtn
             // 
-            this.button1.Location = new System.Drawing.Point(222, 554);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Download";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Downloadbtn.Location = new System.Drawing.Point(222, 554);
+            this.Downloadbtn.Name = "Downloadbtn";
+            this.Downloadbtn.Size = new System.Drawing.Size(75, 23);
+            this.Downloadbtn.TabIndex = 0;
+            this.Downloadbtn.Text = "Download";
+            this.Downloadbtn.UseVisualStyleBackColor = true;
+            this.Downloadbtn.Click += new System.EventHandler(this.Downloadbtn_Click);
             // 
             // qrpic
             // 
             this.qrpic.BackColor = System.Drawing.SystemColors.Control;
             this.qrpic.ImageLocation = "";
-            this.qrpic.Location = new System.Drawing.Point(48, 106);
+            this.qrpic.Location = new System.Drawing.Point(41, 105);
             this.qrpic.Name = "qrpic";
             this.qrpic.Size = new System.Drawing.Size(437, 404);
             this.qrpic.TabIndex = 2;
@@ -83,7 +84,7 @@
             this.Controls.Add(this.GenerateAgain);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.qrpic);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Downloadbtn);
             this.MaximizeBox = false;
             this.Name = "QRGeneratepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -97,7 +98,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Downloadbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button GenerateAgain;
         public System.Windows.Forms.PictureBox qrpic;

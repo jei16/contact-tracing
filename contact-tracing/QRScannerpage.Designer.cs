@@ -34,7 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.QRScannerpic = new System.Windows.Forms.PictureBox();
             this.QRScanTimer = new System.Windows.Forms.Timer(this.components);
-            this.QRScantxtbox = new System.Windows.Forms.TextBox();
+            this.QRScantxtbox = new System.Windows.Forms.RichTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.QRScannerpic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,21 +82,43 @@
             // 
             // QRScantxtbox
             // 
-            this.QRScantxtbox.Location = new System.Drawing.Point(105, 379);
+            this.QRScantxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.QRScantxtbox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.QRScantxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QRScantxtbox.Location = new System.Drawing.Point(462, 20);
             this.QRScantxtbox.Name = "QRScantxtbox";
-            this.QRScantxtbox.Size = new System.Drawing.Size(183, 20);
+            this.QRScantxtbox.ReadOnly = true;
+            this.QRScantxtbox.Size = new System.Drawing.Size(350, 422);
             this.QRScantxtbox.TabIndex = 5;
+            this.QRScantxtbox.Text = "";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(70, 384);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(94, 422);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 7;
             // 
             // QRScannerpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 725);
+            this.ClientSize = new System.Drawing.Size(857, 725);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.QRScantxtbox);
             this.Controls.Add(this.QRScannerpic);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.QRCombobox);
             this.Controls.Add(this.Scanbutton);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "QRScannerpage";
             this.Text = "Form7";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QRScannerpage_FormClosing);
@@ -106,12 +130,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Scanbutton;
-        private System.Windows.Forms.ComboBox QRCombobox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox QRScannerpic;
         private System.Windows.Forms.Timer QRScanTimer;
-        private System.Windows.Forms.TextBox QRScantxtbox;
+        private System.Windows.Forms.RichTextBox QRScantxtbox;
+        public System.Windows.Forms.PictureBox QRScannerpic;
+        public System.Windows.Forms.Button Scanbutton;
+        public System.Windows.Forms.ComboBox QRCombobox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

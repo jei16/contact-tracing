@@ -19,7 +19,6 @@ namespace contact_tracing
         string gender;
         string vaccinated;
         string booster;
-        string qrinfoo;
 
         public static QRCodeFillUp instance;
         public QRCodeFillUp()
@@ -35,18 +34,39 @@ namespace contact_tracing
 
         private void Generatebutton_Click(object sender, EventArgs e)
         {
-           
-            qrinfoo = "Name:" + " " + LastName.Text ;
-           
+            if (fullyvac.Checked == true)
+            {
+                var qrinfoo = LastName.Text + "\n" + FirstName.Text + "\n" + MiddleName.Text + "\n"
+                          + Age.Text + "\n" + Month.Text + "\n" + Day.Value + "\n" + Year.Value + "\n" +
+                          gender + "\n" + Address.Text + "\n" + ContactNumber.Text + "\n" + Email.Text + "\n" +
+                          vaccinated + "\n" + booster;
 
-            QRGeneratepage form = new QRGeneratepage();
-            form.Show();
-            this.Hide();
+                QRGeneratepage form = new QRGeneratepage();
+                form.Show();
+                this.Hide();
 
-            QRCodeGenerator qrpic = new QRCodeGenerator();
-            QRCodeData info = qrpic.CreateQrCode(qrinfoo,QRCodeGenerator.ECCLevel.M);
-            QRCode qr = new QRCode(info);
-            QRGeneratepage.instance.qrpic.Image = qr.GetGraphic(10);
+                QRCodeGenerator qrpic = new QRCodeGenerator();
+                QRCodeData info = qrpic.CreateQrCode(qrinfoo, QRCodeGenerator.ECCLevel.Q);
+                QRCode qr = new QRCode(info);
+                QRGeneratepage.instance.qrpic.Image = qr.GetGraphic(8);
+            }
+            else
+            {
+                var qrinfoo = LastName.Text + "\n" + FirstName.Text + "\n" + MiddleName.Text + "\n"
+                          + Age.Text + "\n" + Month.Text + "\n" + Day.Value + "\n" + Year.Value + "\n" +
+                          gender + "\n" + Address.Text + "\n" + ContactNumber.Text + "\n" + Email.Text + "\n" +
+                          vaccinated + "\n" + "No" ;
+
+                QRGeneratepage form = new QRGeneratepage();
+                form.Show();
+                this.Hide();
+
+                QRCodeGenerator qrpic = new QRCodeGenerator();
+                QRCodeData info = qrpic.CreateQrCode(qrinfoo, QRCodeGenerator.ECCLevel.Q);
+                QRCode qr = new QRCode(info);
+                QRGeneratepage.instance.qrpic.Image = qr.GetGraphic(8);
+            }
+
 
         }
 

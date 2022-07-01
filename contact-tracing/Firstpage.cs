@@ -368,6 +368,7 @@ namespace contact_tracing
         private void firstdosevac_CheckedChanged(object sender, EventArgs e)
         {
             vaccinated = "Yes, 1st Dose only";
+
         }
 
         private void fullyvac_CheckedChanged(object sender, EventArgs e)

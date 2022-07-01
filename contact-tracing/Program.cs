@@ -16,7 +16,7 @@ namespace contact_tracing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QRScannerpage());
+            Application.Run(new QRCodeFillUp());
         }
     }
 }

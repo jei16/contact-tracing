@@ -31,17 +31,20 @@ namespace contact_tracing
             foreach(FilterInfo filter in infoCollection)    
                 QRCombobox.Items.Add(filter.Name);
             QRCombobox.SelectedIndex = 0;
-        }
 
-        private void Scanbutton_Click(object sender, EventArgs e)
-        {
             device = new VideoCaptureDevice(infoCollection[QRCombobox.SelectedIndex].MonikerString);
             device.NewFrame += Device_NewFrame;
             device.Start();
             QRScanTimer.Start();
+        }
+
+        private void Scanbutton_Click(object sender, EventArgs e)
+        {
 
 
         }
+
+
 
         private void Device_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
@@ -61,13 +64,19 @@ namespace contact_tracing
                 BarcodeReader barcode = new BarcodeReader();
                 Result result = barcode.Decode((Bitmap)QRScannerpic.Image);
                 if (result != null)
-                {
-                    QRScantxtbox.Text = result.ToString();
+                { 
+                  Firstpage.instance.FirstName.Text = result.ToString();
                     QRScanTimer.Stop();
                     if (device.IsRunning)
                         device.Stop();
+                   /*Firstpage form = new Firstpage();
+                    form.Show();
+                    this.Hide();*/
                 }
+                
             }
+
+            
         }
     }
 }
