@@ -32,12 +32,13 @@
             this.qrpic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.GenerateAgain = new System.Windows.Forms.Button();
+            this.Backbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.qrpic)).BeginInit();
             this.SuspendLayout();
             // 
             // Downloadbtn
             // 
-            this.Downloadbtn.Location = new System.Drawing.Point(222, 554);
+            this.Downloadbtn.Location = new System.Drawing.Point(222, 544);
             this.Downloadbtn.Name = "Downloadbtn";
             this.Downloadbtn.Size = new System.Drawing.Size(75, 23);
             this.Downloadbtn.TabIndex = 0;
@@ -67,7 +68,7 @@
             // 
             // GenerateAgain
             // 
-            this.GenerateAgain.Location = new System.Drawing.Point(209, 604);
+            this.GenerateAgain.Location = new System.Drawing.Point(209, 581);
             this.GenerateAgain.Name = "GenerateAgain";
             this.GenerateAgain.Size = new System.Drawing.Size(106, 23);
             this.GenerateAgain.TabIndex = 4;
@@ -75,12 +76,23 @@
             this.GenerateAgain.UseVisualStyleBackColor = true;
             this.GenerateAgain.Click += new System.EventHandler(this.GenerateAgain_Click);
             // 
+            // Backbtn
+            // 
+            this.Backbtn.Location = new System.Drawing.Point(222, 619);
+            this.Backbtn.Name = "Backbtn";
+            this.Backbtn.Size = new System.Drawing.Size(75, 23);
+            this.Backbtn.TabIndex = 5;
+            this.Backbtn.Text = "Back";
+            this.Backbtn.UseVisualStyleBackColor = true;
+            this.Backbtn.Click += new System.EventHandler(this.Backbtn_Click);
+            // 
             // QRGeneratepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(527, 666);
+            this.Controls.Add(this.Backbtn);
             this.Controls.Add(this.GenerateAgain);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.qrpic);
@@ -102,5 +114,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button GenerateAgain;
         public System.Windows.Forms.PictureBox qrpic;
+        private System.Windows.Forms.Button Backbtn;
     }
 }

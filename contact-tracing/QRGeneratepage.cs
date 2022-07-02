@@ -56,6 +56,13 @@ namespace contact_tracing
 
             MessageBox.Show("Downloaded!");
         }
+
+        private void Backbtn_Click(object sender, EventArgs e)
+        {
+            Firstpage form = new Firstpage();
+            form.Show();
+            this.Close();
+        }
     }
 }
 
