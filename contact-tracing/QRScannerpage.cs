@@ -36,6 +36,7 @@ namespace contact_tracing
             device.NewFrame += Device_NewFrame;
             device.Start();
             QRScanTimer.Start();
+
         }
 
         private void Scanbutton_Click(object sender, EventArgs e)
@@ -65,13 +66,33 @@ namespace contact_tracing
                 Result result = barcode.Decode((Bitmap)QRScannerpic.Image);
                 if (result != null)
                 { 
-                  Firstpage.instance.FirstName.Text = result.ToString();
+                    result.ToString();
+                    string[] array = result.ToString().Split(new char[] {'\n'});
+                    if (array.Length > 0)
+                    {
+                        Firstpage.instance.LastName.Text = array[0];
+                        Firstpage.instance.FirstName.Text = array[1];
+                        Firstpage.instance.MiddleName.Text = array[2];
+                        Firstpage.instance.Age.Text = array[3];
+                        Firstpage.instance.Month.Text = array[4];
+                        Firstpage.instance.Day.Text = array[5];
+                        Firstpage.instance.Year.Text = array[6];
+                        Firstpage.instance.Gender.Text = array[7];
+                        Firstpage.instance.Address.Text = array[8];
+                        Firstpage.instance.ContactNumber.Text = array[9];
+                        Firstpage.instance.Email.Text = array[10];
+                        Firstpage.instance.Vaccinated.Text = array[11];
+                        Firstpage.instance.Booster.Text = array[12];
+
+                        //12
+                    }
                     QRScanTimer.Stop();
                     if (device.IsRunning)
                         device.Stop();
-                   /*Firstpage form = new Firstpage();
-                    form.Show();
-                    this.Hide();*/
+                    this.Close();
+                    Firstpage.instance.SubmitButton.Visible = true;
+                    Firstpage.instance.Pls.Visible = true;
+                    Firstpage.instance.Plspanel.BackColor = Color.AliceBlue;
                 }
                 
             }

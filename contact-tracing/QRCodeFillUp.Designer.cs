@@ -69,6 +69,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Generatebutton = new System.Windows.Forms.Button();
+            this.Backbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Year)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Day)).BeginInit();
@@ -521,7 +522,7 @@
             // 
             // Generatebutton
             // 
-            this.Generatebutton.Location = new System.Drawing.Point(207, 632);
+            this.Generatebutton.Location = new System.Drawing.Point(207, 622);
             this.Generatebutton.Name = "Generatebutton";
             this.Generatebutton.Size = new System.Drawing.Size(106, 34);
             this.Generatebutton.TabIndex = 95;
@@ -529,11 +530,22 @@
             this.Generatebutton.UseVisualStyleBackColor = true;
             this.Generatebutton.Click += new System.EventHandler(this.Generatebutton_Click);
             // 
+            // Backbtn
+            // 
+            this.Backbtn.Location = new System.Drawing.Point(222, 678);
+            this.Backbtn.Name = "Backbtn";
+            this.Backbtn.Size = new System.Drawing.Size(75, 23);
+            this.Backbtn.TabIndex = 96;
+            this.Backbtn.Text = "Back";
+            this.Backbtn.UseVisualStyleBackColor = true;
+            this.Backbtn.Click += new System.EventHandler(this.Backbtn_Click);
+            // 
             // QRCodeFillUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 725);
+            this.Controls.Add(this.Backbtn);
             this.Controls.Add(this.Generatebutton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.fullyvac);
@@ -567,7 +579,7 @@
             this.Controls.Add(this.label1);
             this.Name = "QRCodeFillUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form6";
+            this.Text = "Register Here!";
             this.Load += new System.EventHandler(this.QRCodeFillUp_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -625,5 +637,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button Generatebutton;
+        private System.Windows.Forms.Button Backbtn;
     }
 }

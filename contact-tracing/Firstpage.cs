@@ -15,9 +15,7 @@ namespace contact_tracing
     
     public partial class Firstpage : Form
     {
-        string gender;
-        string vaccinated;
-        string booster;
+      
         string symptoms;
         string coughh;
         string feverr;
@@ -49,99 +47,18 @@ namespace contact_tracing
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
             
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            gender = "Male";
-        }
+        
 
         private void FirstName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Month_SelectedItemChanged(object sender, EventArgs e)
-        {
-
-            if (Month.Text == "January")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
-
-
-            if (Month.Text == "February")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 29;
-            }
-
-
-            if (Month.Text == "March")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
-
-            if (Month.Text == "April")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 30;
-            }
-
-            if (Month.Text == "May")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
-
-            if (Month.Text == "June")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 30;
-            }
-
-            if (Month.Text == "July")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
-
-            if (Month.Text == "August")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
-
-            if (Month.Text == "September")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 30;
-            }
-
-            if (Month.Text == "October")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
-
-            if (Month.Text == "November")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 30;
-            }
-
-            if (Month.Text == "December")
-            {
-                Day.Minimum = 1;
-                Day.Maximum = 31;
-            }
-
-
-        }
-
+        
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             {
@@ -154,7 +71,7 @@ namespace contact_tracing
                 outputfile.WriteLine(" ");
                 outputfile.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
                 outputfile.WriteLine(" ");
-                outputfile.WriteLine("Gender:" + " " + gender);
+                outputfile.WriteLine("Gender:" + " " + Gender.Text);
                 outputfile.WriteLine(" ");
                 outputfile.WriteLine("Address:" + " " + Address.Text);
                 outputfile.WriteLine(" ");
@@ -162,17 +79,9 @@ namespace contact_tracing
                 outputfile.WriteLine(" ");
                 outputfile.WriteLine("Email:" + " " + Email.Text);
                 outputfile.WriteLine(" ");
-                outputfile.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
+                outputfile.WriteLine("Received COVID-19 Vaccine?:" + " " + Vaccinated.Text);
                 outputfile.WriteLine(" ");
-
-                if (fullyvac.Checked == true)
-                {
-                    outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
-                }
-                else
-                {
-                    outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + "No");
-                }
+                 outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + Booster.Text);
 
                 outputfile.WriteLine(" ");
                 outputfile.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
@@ -242,7 +151,7 @@ namespace contact_tracing
                 outputfile.WriteLine(" ");
                 outputfile.WriteLine("Birthday:" + " " + Month.Text + " " + Day.Text + "," + " " + Year.Text);
                 outputfile.WriteLine(" ");
-                outputfile.WriteLine("Gender:" + " " + gender);
+                outputfile.WriteLine("Gender:" + " " + Gender.Text);
                 outputfile.WriteLine(" ");
                 outputfile.WriteLine("Address:" + " " + Address.Text);
                 outputfile.WriteLine(" ");
@@ -250,17 +159,9 @@ namespace contact_tracing
                 outputfile.WriteLine(" ");
                 outputfile.WriteLine("Email:" + " " + Email.Text);
                 outputfile.WriteLine(" ");
-                outputfile.WriteLine("Received COVID-19 Vaccine?:" + " " + vaccinated);
+                outputfile.WriteLine("Received COVID-19 Vaccine?:" + " " + Vaccinated.Text);
                 outputfile.WriteLine(" ");
-
-                if (fullyvac.Checked == true)
-                {
-                    outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + booster);
-                }
-                else
-                {
-                    outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + "No");
-                }
+                outputfile.WriteLine("Received COVID-19 Vaccine Booster Shot?:" + " " + Booster.Text);
 
                 outputfile.WriteLine(" ");
                 outputfile.WriteLine("Experiencing COVID-19 symptoms?:" + " " + symptoms);
@@ -327,24 +228,19 @@ namespace contact_tracing
                 MiddleName.Text = "";
                 LastName.Text = "";
                 Age.Text = "";
-                Month.Text = "January";
-                Day.Value = 1;
-                Year.Value = 2000;
-                MaleButton.Checked = false;
-                FemaleButton.Checked = false;
-                Othersbutton.Checked = false;
+                Month.Text = "";
                 Address.Text = "";
                 ContactNumber.Text = "";
                 Email.Text = "";
-                NoVac.Checked = false;
-                firstdosevac.Checked = false;
-                fullyvac.Checked = false;
-                NoBooster.Checked = false;
-                HasBooster.Checked = false;
+                Gender.Text = "";
+                Vaccinated.Text = "";
+                Booster.Text = "";
+                SubmitButton.Visible = false;
+                Pls.Visible = false;
+                Plspanel.BackColor = Color.White;
                 NoSymptoms.Checked = false;
                 HasSymptoms.Checked = false;
 
-
             }
 
         }
@@ -354,95 +250,12 @@ namespace contact_tracing
 
             
 
-        private void FemaleButton_CheckedChanged(object sender, EventArgs e)
-        {
-            gender = "Female";
-        }
+        
+       
 
+        
 
-        private void NoVac_CheckedChanged(object sender, EventArgs e)
-        {
-            vaccinated = "No";
-        }
-
-        private void firstdosevac_CheckedChanged(object sender, EventArgs e)
-        {
-            vaccinated = "Yes, 1st Dose only";
-
-        }
-
-        private void fullyvac_CheckedChanged(object sender, EventArgs e)
-        {
-            vaccinated = "Yes, Fully Vaccinated (1st and 2nd Dose)";
-
-            if (fullyvac.Checked == true)
-            {
-                NoBooster.Enabled = true;
-                HasBooster.Enabled = true;
-                boosterlabel.ForeColor = Color.Black;
-            }
-            else
-            {
-                NoBooster.Enabled = false;
-                HasBooster.Enabled = false;
-                boosterlabel.ForeColor = Color.Gray;
-                NoBooster.Checked = false;
-                HasBooster.Checked = false;
-            }
-        }
-
-        private void NoBooster_CheckedChanged(object sender, EventArgs e)
-        {
-            booster = "No";
-        }
-
-        private void HasBooster_CheckedChanged(object sender, EventArgs e)
-        {
-            booster = "Yes";
-        }
-
-        private void NoSymptoms_CheckedChanged(object sender, EventArgs e)
-        {
-            symptoms = "No";
-        }
-
-        private void HasSymptoms_CheckedChanged(object sender, EventArgs e)
-        {
-            symptoms = "Yes";
-
-            if (HasSymptoms.Checked == true)
-            {
-                cough.Enabled = true;
-                fever.Enabled = true;
-                sorethroat.Enabled = true;
-                shortnessofbreath.Enabled = true;
-                runnynose.Enabled = true;
-                lossofsmellortaste.Enabled = true;
-                Othersymptext.Enabled = true;
-                ifyes.ForeColor = Color.Black;
-                otherslabel.ForeColor = Color.Black;
-
-            }
-            else
-            {
-                cough.Enabled = false;
-                fever.Enabled = false;
-                sorethroat.Enabled = false;
-                shortnessofbreath.Enabled = false;
-                runnynose.Enabled = false;
-                lossofsmellortaste.Enabled = false;
-                Othersymptext.Enabled = false;
-                Othersymptext.Text = " ";
-                cough.Checked = false;
-                fever.Checked = false;
-                sorethroat.Checked = false;
-                shortnessofbreath.Checked = false;
-                runnynose.Checked = false;
-                lossofsmellortaste.Checked = false;
-                ifyes.ForeColor = Color.Gray;
-                otherslabel.ForeColor = Color.Gray;
-            }
-        }
+        
 
         private void cough_CheckedChanged(object sender, EventArgs e)
         {
@@ -475,25 +288,6 @@ namespace contact_tracing
         }
 
 
-        private void OtherTextBox_TextChanged(object sender, EventArgs e)
-        {
-            gender = OtherTextBox.Text;
-        }
-
-
-        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (Othersbutton.Checked == true)
-            {
-                OtherTextBox.Enabled = true;
-            }
-            else
-            {
-                OtherTextBox.Enabled = false;
-                OtherTextBox.Text = " ";
-            }
-        }
-
 
         private void Othersymptext_TextChanged(object sender, EventArgs e)
         {
@@ -511,17 +305,7 @@ namespace contact_tracing
 
         }
 
-        private void Year_ValueChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void Day_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
+  
         private void InfoButton_Click(object sender, EventArgs e)
         {
             secondpage form = new secondpage();
@@ -554,34 +338,18 @@ namespace contact_tracing
             LastName.Enabled = true;
             Age.Text = "";
             Age.Enabled = true;
-            Month.Text = "January";
+            Month.Text = "";
             Month.Enabled = true;
-            Day.Value = 1;
+            Day.Text = "";
             Day.Enabled = true;
-            Year.Value = 2000;
+            Year.Text = "";
             Year.Enabled = true;
-            MaleButton.Checked = false;
-            MaleButton.Enabled = true;
-            FemaleButton.Checked = false;
-            FemaleButton.Enabled = true;
-            Othersbutton.Checked = false;
-            Othersbutton.Enabled = true;
             Address.Text = "";
             Address.Enabled = true;
             ContactNumber.Text = "";
             ContactNumber.Enabled = true;
             Email.Text = "";
             Email.Enabled = true;
-            NoVac.Checked = false;
-            NoVac.Enabled = true;
-            firstdosevac.Checked = false;
-            firstdosevac.Enabled = true;
-            fullyvac.Checked = false;
-            fullyvac.Enabled = true;
-            NoBooster.Checked = false;
-            NoBooster.Enabled = false;
-            HasBooster.Checked = false;
-            HasBooster.Enabled = false;
             NoSymptoms.Checked = false;
             NoSymptoms.Enabled = true;
             HasSymptoms.Checked = false;
@@ -599,15 +367,17 @@ namespace contact_tracing
             receivedlabel.Enabled = true;
             boosterlabel.Enabled = true;
             symplabel.Enabled = true;
+           scanbtn.Enabled = true;
+           Registerbutton.Enabled = true;
+           Gender.Text = "";
+           Gender.Enabled = true;
+            Vaccinated.Text = "";
+            Vaccinated.Enabled = true;
+           Booster.Text = "";
+            Booster.Enabled = true;
         }
 
-        
-        
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Date2day_ValueChanged(object sender, EventArgs e)
         {
@@ -689,6 +459,73 @@ namespace contact_tracing
                 Day2day.Minimum = 1;
                 Day2day.Maximum = 31;
             }
+        }
+
+        private void scanbtn_Click(object sender, EventArgs e)
+        {
+            QRScannerpage form = new QRScannerpage();
+            form.Show();
+            
+        }
+
+        private void Registerbutton_Click(object sender, EventArgs e)
+        {
+            QRCodeFillUp form = new QRCodeFillUp();
+            form.Show();
+            this.Hide();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HasSymptoms_CheckedChanged(object sender, EventArgs e)
+        {
+            symptoms = "Yes";
+
+            if (HasSymptoms.Checked == true)
+            {
+                cough.Enabled = true;
+                fever.Enabled = true;
+                sorethroat.Enabled = true;
+                shortnessofbreath.Enabled = true;
+                runnynose.Enabled = true;
+                lossofsmellortaste.Enabled = true;
+                Othersymptext.Enabled = true;
+                ifyes.ForeColor = Color.Black;
+                otherslabel.ForeColor = Color.Black;
+
+            }
+            else
+            {
+                cough.Enabled = false;
+                fever.Enabled = false;
+                sorethroat.Enabled = false;
+                shortnessofbreath.Enabled = false;
+                runnynose.Enabled = false;
+                lossofsmellortaste.Enabled = false;
+                Othersymptext.Enabled = false;
+                Othersymptext.Text = " ";
+                cough.Checked = false;
+                fever.Checked = false;
+                sorethroat.Checked = false;
+                shortnessofbreath.Checked = false;
+                runnynose.Checked = false;
+                lossofsmellortaste.Checked = false;
+                ifyes.ForeColor = Color.Gray;
+                otherslabel.ForeColor = Color.Gray;
+            }
+        }
+
+        private void NoSymptoms_CheckedChanged(object sender, EventArgs e)
+        {
+            symptoms = "No";
+        }
+
+        private void receivedlabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -48,7 +48,7 @@ namespace contact_tracing
                 QRCodeGenerator qrpic = new QRCodeGenerator();
                 QRCodeData info = qrpic.CreateQrCode(qrinfoo, QRCodeGenerator.ECCLevel.Q);
                 QRCode qr = new QRCode(info);
-                QRGeneratepage.instance.qrpic.Image = qr.GetGraphic(8);
+                QRGeneratepage.instance.qrpic.Image = qr.GetGraphic(5);
             }
             else
             {
@@ -213,6 +213,13 @@ namespace contact_tracing
         private void HasBooster_CheckedChanged(object sender, EventArgs e)
         {
             booster = "Yes";
+        }
+
+        private void Backbtn_Click(object sender, EventArgs e)
+        {
+            Firstpage form = new Firstpage();
+            form.Show();
+            this.Close();
         }
     }
 }

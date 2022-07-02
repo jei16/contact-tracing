@@ -42,34 +42,24 @@ namespace contact_tracing
                 Firstpage.instance.LastName.Enabled = false;
                 Firstpage.instance.Age.Text = "";
                 Firstpage.instance.Age.Enabled = false;
-                Firstpage.instance.Month.Text = "January";
+                Firstpage.instance.Month.Text = "";
                 Firstpage.instance.Month.Enabled = false;
-                Firstpage.instance.Day.Value = 1;
+                Firstpage.instance.Day.Text = "";
                 Firstpage.instance.Day.Enabled = false;
-                Firstpage.instance.Year.Value = 2000;
+                Firstpage.instance.Year.Text = "";
                 Firstpage.instance.Year.Enabled = false;
-                Firstpage.instance.MaleButton.Checked = false;
-                Firstpage.instance.MaleButton.Enabled = false;
-                Firstpage.instance.FemaleButton.Checked = false;
-                Firstpage.instance.FemaleButton.Enabled = false;
-                Firstpage.instance.Othersbutton.Checked = false;
-                Firstpage.instance.Othersbutton.Enabled = false;
+                Firstpage.instance.Gender.Text = "";
+                Firstpage.instance.Gender.Enabled = false;
                 Firstpage.instance.Address.Text = "";
                 Firstpage.instance.Address.Enabled = false;
                 Firstpage.instance.ContactNumber.Text = "";
                 Firstpage.instance.ContactNumber.Enabled = false;
                 Firstpage.instance.Email.Text = "";
                 Firstpage.instance.Email.Enabled = false;
-                Firstpage.instance.NoVac.Checked = false;
-                Firstpage.instance.NoVac.Enabled = false;
-                Firstpage.instance.firstdosevac.Checked = false;
-                Firstpage.instance.firstdosevac.Enabled = false;
-                Firstpage.instance.fullyvac.Checked = false;
-                Firstpage.instance.fullyvac.Enabled = false;
-                Firstpage.instance.NoBooster.Checked = false;
-                Firstpage.instance.NoBooster.Enabled = false;
-                Firstpage.instance.HasBooster.Checked = false;
-                Firstpage.instance.HasBooster.Enabled = false;
+                Firstpage.instance.Vaccinated.Text = "";
+                Firstpage.instance.Vaccinated.Enabled = false;
+                Firstpage.instance.Booster.Text = "";
+                Firstpage.instance.Booster.Enabled = false;
                 Firstpage.instance.NoSymptoms.Checked = false;
                 Firstpage.instance.NoSymptoms.Enabled = false;
                 Firstpage.instance.HasSymptoms.Checked = false;
@@ -87,7 +77,10 @@ namespace contact_tracing
                 Firstpage.instance.receivedlabel.Enabled = false;
                 Firstpage.instance.boosterlabel.Enabled = false;
                 Firstpage.instance.symplabel.Enabled = false;
-                
+                Firstpage.instance.scanbtn.Enabled = false;
+                Firstpage.instance.Registerbutton.Enabled = false;
+
+
 
 
 
